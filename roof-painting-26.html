@@ -4,20 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roof Painting Gold Coast | Stanley's Painting Services</title>
-  <meta name="description" content="Get your roof professionally painted by Gold Coast locals. Wash & paint process, affordable pricing, obligation-free quotes. Stanley's Painting Services.">
+  <meta name="description" content="Get your roof professionally painted by Gold Coast locals. Wash and paint process, affordable pricing, obligation-free quotes. Stanley's Painting Services.">
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '977805120850078');
-    fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','977805120850078');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=977805120850078&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L27N4E96QD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L27N4E96QD');
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,1057 +33,307 @@
       --orange-light: #fdb96a;
       --charcoal: #1c1c1e;
       --dark: #111;
-      --mid: #2a2a2a;
       --light-bg: #fafaf8;
-      --white: #ffffff;
       --text-muted: #666;
       --border: #e8e4de;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; font-weight: 300; background: var(--light-bg); color: var(--charcoal); overflow-x: hidden; }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      background: var(--light-bg);
-      color: var(--charcoal);
-      overflow-x: hidden;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: var(--charcoal);
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
-    }
-
+    /* HEADER */
+    header { background: var(--charcoal); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
     header img { height: 48px; }
-
-    .header-cta {
-      background: var(--orange);
-      color: white;
-      padding: 10px 22px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-      letter-spacing: 0.3px;
-      transition: background 0.2s;
-      white-space: nowrap;
-    }
+    .header-cta { background: var(--orange); color: white; padding: 10px 22px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
     .header-cta:hover { background: var(--orange-dark); }
 
-    /* ── HERO ── */
-    .hero {
-      background: var(--charcoal);
-      position: relative;
-      overflow: hidden;
-      padding: 70px 24px 80px;
-      text-align: center;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: 
-        radial-gradient(ellipse 80% 60% at 50% 120%, rgba(246,158,61,0.25) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 80% -10%, rgba(246,158,61,0.15) 0%, transparent 60%);
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(246,158,61,0.15);
-      border: 1px solid rgba(246,158,61,0.4);
-      color: var(--orange-light);
-      padding: 6px 16px;
-      border-radius: 100px;
-      font-size: 13px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      margin-bottom: 28px;
-      position: relative;
-    }
-
-    .hero-badge .dot {
-      width: 7px; height: 7px;
-      background: var(--orange);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-
-    .hero h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(42px, 7vw, 80px);
-      line-height: 0.95;
-      color: white;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      position: relative;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 span {
-      color: var(--orange);
-      display: block;
-    }
-
-    .hero-sub {
-      font-size: clamp(16px, 2.5vw, 20px);
-      color: #aaa;
-      max-width: 560px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-      position: relative;
-    }
-
+    /* HERO */
+    .hero { background: var(--charcoal); position: relative; overflow: hidden; padding: 70px 24px 80px; text-align: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(246,158,61,0.25) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 80% -10%, rgba(246,158,61,0.15) 0%, transparent 60%); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(246,158,61,0.15); border: 1px solid rgba(246,158,61,0.4); color: var(--orange-light); padding: 6px 16px; border-radius: 100px; font-size: 13px; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 28px; position: relative; }
+    .hero-badge .dot { width: 7px; height: 7px; background: var(--orange); border-radius: 50%; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+    .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(42px, 7vw, 80px); line-height: 0.95; color: white; text-transform: uppercase; letter-spacing: -1px; position: relative; margin-bottom: 24px; }
+    .hero h1 span { color: var(--orange); display: block; }
+    .hero-sub { font-size: clamp(16px, 2.5vw, 20px); color: #aaa; max-width: 560px; margin: 0 auto 40px; line-height: 1.6; position: relative; }
     .hero-sub strong { color: white; font-weight: 600; }
+    .hero-btn { display: inline-block; background: var(--orange); color: white; padding: 18px 44px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; position: relative; transition: all 0.2s; animation: glow 3s ease-in-out infinite; }
+    @keyframes glow { 0%,100%{box-shadow:0 8px 30px rgba(246,158,61,0.4)} 50%{box-shadow:0 8px 50px rgba(246,158,61,0.7)} }
+    .hero-btn:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .hero-small { margin-top: 16px; color: #777; font-size: 13px; position: relative; }
+    .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 60px; position: relative; flex-wrap: wrap; }
+    .hero-stat { text-align: center; }
+    .hero-stat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 44px; color: var(--orange); line-height: 1; }
+    .hero-stat-label { color: #888; font-size: 13px; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .hero-divider { width: 1px; height: 50px; background: #333; align-self: center; }
 
-    .hero-btn {
-      display: inline-block;
-      background: var(--orange);
-      color: white;
-      padding: 18px 44px;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 700;
-      text-decoration: none;
-      position: relative;
-      transition: all 0.2s;
-      box-shadow: 0 8px 30px rgba(246,158,61,0.4);
-      animation: gentle-glow 3s ease-in-out infinite;
-    }
+    /* TRUST BAR */
+    .trust-bar { background: var(--orange); padding: 16px 24px; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; color: white; font-weight: 600; font-size: 14px; }
 
-    @keyframes gentle-glow {
-      0%, 100% { box-shadow: 0 8px 30px rgba(246,158,61,0.4); }
-      50% { box-shadow: 0 8px 45px rgba(246,158,61,0.65); }
-    }
-
-    .hero-btn:hover {
-      background: var(--orange-dark);
-      transform: translateY(-2px);
-    }
-
-    .hero-small {
-      margin-top: 16px;
-      color: #777;
-      font-size: 13px;
-      position: relative;
-    }
-
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 60px;
-      position: relative;
-      flex-wrap: wrap;
-    }
-
-    .hero-stat {
-      text-align: center;
-    }
-
-    .hero-stat-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 44px;
-      color: var(--orange);
-      line-height: 1;
-    }
-
-    .hero-stat-label {
-      color: #888;
-      font-size: 13px;
-      margin-top: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .hero-divider {
-      width: 1px;
-      height: 50px;
-      background: #333;
-      align-self: center;
-    }
-
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: var(--orange);
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: white;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .trust-item .icon { font-size: 18px; }
-
-    /* ── PROCESS ── */
-    .process {
-      padding: 90px 24px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: clamp(34px, 5vw, 56px);
-      text-transform: uppercase;
-      line-height: 1;
-      letter-spacing: -0.5px;
-      color: var(--charcoal);
-      margin-bottom: 16px;
-    }
-
-    .section-sub {
-      color: var(--text-muted);
-      font-size: 17px;
-      max-width: 500px;
-      line-height: 1.6;
-      margin-bottom: 60px;
-    }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2px;
-    }
-
-    .step {
-      background: white;
-      padding: 40px 32px;
-      position: relative;
-      border: 1px solid var(--border);
-      transition: all 0.3s;
-    }
-
+    /* PROCESS */
+    .process { padding: 90px 24px; max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(34px, 5vw, 56px); text-transform: uppercase; line-height: 1; letter-spacing: -0.5px; color: var(--charcoal); margin-bottom: 16px; }
+    .section-sub { color: var(--text-muted); font-size: 17px; max-width: 500px; line-height: 1.6; margin-bottom: 60px; }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; }
+    .step { background: white; padding: 40px 32px; border: 1px solid var(--border); transition: all 0.3s; }
     .step:first-child { border-radius: 12px 0 0 12px; }
     .step:last-child { border-radius: 0 12px 12px 0; }
-
-    .step:hover {
-      background: var(--charcoal);
-      border-color: var(--charcoal);
-    }
-
-    .step:hover .step-num,
-    .step:hover h3,
-    .step:hover p { color: white; }
-
+    .step:hover { background: var(--charcoal); border-color: var(--charcoal); }
     .step:hover .step-num { color: var(--orange); }
+    .step:hover .step-h, .step:hover .step-p { color: white; }
+    .step-num { font-family: 'Barlow Condensed', sans-serif; font-size: 72px; font-weight: 900; color: #f0ede8; line-height: 1; margin-bottom: 16px; transition: color 0.3s; }
+    .step-h { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; transition: color 0.3s; }
+    .step-p { font-size: 15px; color: var(--text-muted); line-height: 1.6; transition: color 0.3s; }
 
-    .step-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 72px;
-      font-weight: 900;
-      color: #f0ede8;
-      line-height: 1;
-      margin-bottom: 16px;
-      transition: color 0.3s;
-    }
-
-    .step h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 26px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      transition: color 0.3s;
-    }
-
-    .step p {
-      font-size: 15px;
-      color: var(--text-muted);
-      line-height: 1.6;
-      transition: color 0.3s;
-    }
-
-    /* ── WHY ── */
-    .why {
-      background: var(--charcoal);
-      padding: 90px 24px;
-    }
-
-    .why-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
+    /* WHY */
+    .why { background: var(--charcoal); padding: 90px 24px; }
+    .why-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
     .why .section-title { color: white; }
     .why .section-sub { color: #888; }
+    .why-points { display: flex; flex-direction: column; gap: 24px; margin-top: 8px; }
+    .why-point { display: flex; gap: 20px; align-items: flex-start; }
+    .why-icon { width: 44px; height: 44px; background: rgba(246,158,61,0.15); border: 1px solid rgba(246,158,61,0.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .why-point-text h4 { color: white; font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+    .why-point-text p { color: #888; font-size: 14px; line-height: 1.6; }
+    .rating-card { background: rgba(246,158,61,0.08); border: 1px solid rgba(246,158,61,0.2); border-radius: 16px; padding: 40px; text-align: center; }
 
-    .why-points {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin-top: 8px;
-    }
+    /* SURVEY */
+    .survey-section { padding: 90px 24px; background: var(--light-bg); position: relative; }
+    .survey-section::before { content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 800px; height: 300px; background: radial-gradient(ellipse, rgba(246,158,61,0.1) 0%, transparent 70%); pointer-events: none; }
+    .survey-wrap { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+    .survey-header { text-align: center; margin-bottom: 48px; }
+    .survey-card { background: white; border-radius: 20px; box-shadow: 0 20px 80px rgba(0,0,0,0.1); overflow: hidden; }
+    .progress-bar { height: 5px; background: #f0ede8; }
+    .progress-fill { height: 100%; background: var(--orange); width: 33%; transition: width 0.5s cubic-bezier(0.4,0,0.2,1); }
+    .survey-body { padding: 48px 44px; }
+    .step-ind { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .survey-q { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 700; text-transform: uppercase; color: var(--charcoal); margin-bottom: 8px; line-height: 1.1; }
+    .survey-hint { color: var(--text-muted); font-size: 14px; margin-bottom: 32px; }
 
-    .why-point {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
+    .opts { display: grid; gap: 14px; }
+    .opt { border: 2px solid var(--border); border-radius: 12px; padding: 20px 24px; cursor: pointer; transition: border-color 0.2s, background 0.2s; display: flex; align-items: center; gap: 16px; background: white; text-align: left; width: 100%; font-family: 'DM Sans', sans-serif; }
+    .opt:hover { border-color: var(--orange); background: rgba(246,158,61,0.04); }
+    .opt.sel { border-color: var(--orange); background: rgba(246,158,61,0.08); }
+    .opt-emoji { font-size: 28px; width: 40px; text-align: center; flex-shrink: 0; pointer-events: none; }
+    .opt-txt { flex: 1; pointer-events: none; }
+    .opt-title { font-weight: 600; font-size: 16px; color: var(--charcoal); margin-bottom: 2px; }
+    .opt-desc { font-size: 13px; color: var(--text-muted); }
+    .opt-chk { width: 24px; height: 24px; border: 2px solid var(--border); border-radius: 50%; flex-shrink: 0; transition: all 0.2s; display: flex; align-items: center; justify-content: center; font-size: 12px; color: transparent; pointer-events: none; }
+    .opt.sel .opt-chk { background: var(--orange); border-color: var(--orange); color: white; }
 
-    .why-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(246,158,61,0.15);
-      border: 1px solid rgba(246,158,61,0.3);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
+    .form-grid { display: grid; gap: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg label { font-size: 13px; font-weight: 600; color: var(--charcoal); letter-spacing: 0.3px; }
+    .fg input { border: 2px solid var(--border); border-radius: 10px; padding: 14px 18px; font-size: 16px; font-family: 'DM Sans', sans-serif; font-weight: 300; outline: none; background: #fafaf8; color: var(--charcoal); transition: border-color 0.2s; }
+    .fg input:focus { border-color: var(--orange); background: white; }
+    .fg input::placeholder { color: #bbb; }
 
-    .why-point-text h4 {
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .why-point-text p {
-      color: #888;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .why-quote {
-      background: rgba(246,158,61,0.08);
-      border: 1px solid rgba(246,158,61,0.2);
-      border-radius: 16px;
-      padding: 40px;
-      margin-top: 20px;
-    }
-
-    .stars { font-size: 20px; margin-bottom: 16px; letter-spacing: 2px; }
-
-    .why-quote blockquote {
-      color: #ccc;
-      font-size: 16px;
-      line-height: 1.8;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    .reviewer {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .reviewer-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--orange);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: white;
-      font-size: 16px;
-    }
-
-    .reviewer-name { color: white; font-weight: 600; font-size: 15px; }
-    .reviewer-sub { color: #666; font-size: 12px; }
-
-    /* ── SURVEY ── */
-    .survey-section {
-      padding: 90px 24px;
-      background: var(--light-bg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .survey-section::before {
-      content: '';
-      position: absolute;
-      top: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 300px;
-      background: radial-gradient(ellipse, rgba(246,158,61,0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .survey-wrap {
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .survey-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .survey-card {
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 20px 80px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    /* Progress bar */
-    .progress-bar {
-      height: 5px;
-      background: #f0ede8;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: var(--orange);
-      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .survey-body {
-      padding: 48px 44px;
-    }
-
-    .step-indicator {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 12px;
-    }
-
-    .survey-q {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 32px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--charcoal);
-      margin-bottom: 8px;
-      line-height: 1.1;
-    }
-
-    .survey-hint {
-      color: var(--text-muted);
-      font-size: 14px;
-      margin-bottom: 32px;
-    }
-
-    /* Option cards */
-    .options-grid {
-      display: grid;
-      gap: 14px;
-    }
-
-    .option-card {
-      border: 2px solid var(--border);
-      border-radius: 12px;
-      padding: 20px 24px;
-      cursor: pointer;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: white;
-      text-align: left;
-      width: 100%;
-      font-family: 'DM Sans', sans-serif;
-    }
-
-    .option-card:hover {
-      border-color: var(--orange);
-      background: rgba(246,158,61,0.04);
-    }
-
-    .option-card.selected {
-      border-color: var(--orange);
-      background: rgba(246,158,61,0.08);
-    }
-
-    .option-emoji { font-size: 28px; width: 40px; text-align: center; }
-
-    .option-text { flex: 1; }
-    .option-title {
-      font-weight: 600;
-      font-size: 16px;
-      color: var(--charcoal);
-      margin-bottom: 2px;
-    }
-    .option-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .option-check {
-      width: 24px;
-      height: 24px;
-      border: 2px solid var(--border);
-      border-radius: 50%;
-      flex-shrink: 0;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-    }
-
-    .option-card.selected .option-check {
-      background: var(--orange);
-      border-color: var(--orange);
-      color: white;
-    }
-
-    /* Form fields */
-    .form-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group label {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--charcoal);
-      letter-spacing: 0.3px;
-    }
-
-    .form-group input {
-      border: 2px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 18px;
-      font-size: 16px;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      transition: border-color 0.2s;
-      outline: none;
-      background: #fafaf8;
-      color: var(--charcoal);
-    }
-
-    .form-group input:focus {
-      border-color: var(--orange);
-      background: white;
-    }
-
-    .form-group input::placeholder { color: #bbb; }
-
-    /* Nav buttons */
-    .survey-nav {
-      display: flex;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .btn-back {
-      padding: 14px 24px;
-      border: 2px solid var(--border);
-      border-radius: 10px;
-      background: white;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-muted);
-      transition: all 0.2s;
-    }
+    .snav { display: flex; gap: 12px; margin-top: 32px; }
+    .btn-back { padding: 14px 24px; border: 2px solid var(--border); border-radius: 10px; background: white; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--text-muted); transition: all 0.2s; }
     .btn-back:hover { border-color: #aaa; color: var(--charcoal); }
-
-    .btn-next {
-      flex: 1;
-      padding: 16px 24px;
-      background: var(--orange);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .btn-next:hover { background: var(--orange-dark); }
+    .btn-next { flex: 1; padding: 16px 24px; background: var(--orange); color: white; border: none; border-radius: 10px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 700; transition: background 0.2s; }
+    .btn-next:hover:not(:disabled) { background: var(--orange-dark); }
     .btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
 
-    .btn-next .arrow { font-size: 18px; }
+    .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .pill { background: rgba(246,158,61,0.1); border: 1px solid rgba(246,158,61,0.3); color: var(--orange-dark); padding: 5px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; }
 
-    /* Survey summary pills */
-    .summary-pills {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-    .pill {
-      background: rgba(246,158,61,0.1);
-      border: 1px solid rgba(246,158,61,0.3);
-      color: var(--orange-dark);
-      padding: 5px 14px;
-      border-radius: 100px;
-      font-size: 13px;
-      font-weight: 600;
-    }
+    .pane { display: none; }
+    .pane.on { display: block; animation: si 0.35s cubic-bezier(0.4,0,0.2,1) both; }
+    @keyframes si { from{opacity:0;transform:translateX(28px)} to{opacity:1;transform:translateX(0)} }
 
-    /* Thank you */
-    .thankyou {
-      display: none;
-      text-align: center;
-      padding: 60px 44px;
-    }
+    .ty { text-align: center; padding: 60px 44px; }
+    .ty-icon { width: 80px; height: 80px; background: rgba(246,158,61,0.1); border: 2px solid rgba(246,158,61,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; margin: 0 auto 28px; animation: pop 0.5s cubic-bezier(0.175,0.885,0.32,1.275) both; }
+    @keyframes pop { from{transform:scale(0);opacity:0} to{transform:scale(1);opacity:1} }
+    .ty h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 40px; font-weight: 900; text-transform: uppercase; color: var(--charcoal); margin-bottom: 12px; }
+    .ty p { color: var(--text-muted); font-size: 16px; line-height: 1.7; max-width: 380px; margin: 0 auto 20px; }
+    .ty-call { display: inline-block; background: var(--charcoal); color: white; padding: 14px 32px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; margin-top: 8px; }
 
-    .thankyou-icon {
-      width: 80px;
-      height: 80px;
-      background: rgba(246,158,61,0.1);
-      border: 2px solid rgba(246,158,61,0.3);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      margin: 0 auto 28px;
-      animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-    }
+    /* BOTTOM CTA */
+    .bottom-cta { background: var(--orange); padding: 80px 24px; text-align: center; }
+    .bottom-cta h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(40px,6vw,70px); font-weight: 900; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
+    .bottom-cta p { color: rgba(255,255,255,0.8); font-size: 17px; margin-bottom: 32px; }
+    .btn-dark { display: inline-block; background: var(--charcoal); color: white; padding: 18px 44px; border-radius: 8px; font-size: 17px; font-weight: 700; text-decoration: none; transition: background 0.2s; }
+    .btn-dark:hover { background: #000; }
 
-    @keyframes pop-in {
-      0% { transform: scale(0); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .thankyou h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 40px;
-      font-weight: 900;
-      text-transform: uppercase;
-      color: var(--charcoal);
-      margin-bottom: 12px;
-    }
-
-    .thankyou p {
-      color: var(--text-muted);
-      font-size: 16px;
-      line-height: 1.7;
-      max-width: 380px;
-      margin: 0 auto 28px;
-    }
-
-    .thankyou-number {
-      display: inline-block;
-      background: var(--charcoal);
-      color: white;
-      padding: 12px 28px;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 700;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-    }
-
-    /* ── BOTTOM CTA ── */
-    .bottom-cta {
-      background: var(--orange);
-      padding: 80px 24px;
-      text-align: center;
-    }
-
-    .bottom-cta h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(40px, 6vw, 70px);
-      font-weight: 900;
-      text-transform: uppercase;
-      color: white;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .bottom-cta p {
-      color: rgba(255,255,255,0.8);
-      font-size: 17px;
-      margin-bottom: 32px;
-    }
-
-    .btn-dark {
-      display: inline-block;
-      background: var(--charcoal);
-      color: white;
-      padding: 18px 44px;
-      border-radius: 8px;
-      font-size: 17px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .btn-dark:hover { background: #111; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--dark);
-      padding: 32px 24px;
-      text-align: center;
-    }
-
-    footer img { height: 52px; margin-bottom: 12px; }
-
-    footer p {
-      color: #555;
-      font-size: 13px;
-      margin-bottom: 4px;
-    }
-
+    /* FOOTER */
+    footer { background: var(--dark); padding: 32px 24px; text-align: center; }
+    footer img { height: 52px; margin: 0 auto 12px; display: block; }
+    footer p { color: #555; font-size: 13px; margin-bottom: 4px; }
     footer a { color: var(--orange); text-decoration: none; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
-      .survey-body { padding: 36px 24px; }
-      .thankyou { padding: 48px 24px; }
+      .survey-body { padding: 32px 20px; }
+      .ty { padding: 40px 20px; }
       .hero-divider { display: none; }
       .trust-bar { gap: 16px; }
-      .step:first-child, .step:last-child { border-radius: 0; }
       .step:first-child { border-radius: 12px 12px 0 0; }
       .step:last-child { border-radius: 0 0 12px 12px; }
-      .process-steps { gap: 2px; grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 480px) {
       .header-cta { display: none; }
       .survey-q { font-size: 26px; }
-    }
-
-    /* Slide animation */
-    .survey-step { animation: slide-in 0.35s cubic-bezier(0.4, 0, 0.2, 1) both; }
-
-    @keyframes slide-in {
-      from { opacity: 0; transform: translateX(30px); }
-      to { opacity: 1; transform: translateX(0); }
     }
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services">
-  <a href="#quote" class="header-cta">Get Free Quote →</a>
+  <a href="#quote" class="header-cta">Get Free Quote &rarr;</a>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">
-    <span class="dot"></span>
-    Gold Coast Local Business
-  </div>
-  <h1>
-    Transform Your Roof<br>
-    <span>With a Fresh Paint Upgrade</span>
-  </h1>
-  <p class="hero-sub">
-    <strong>Tired of a faded, ageing roof?</strong> Our professional wash &amp; paint process restores and protects your roof — at a price you'll love.
-  </p>
-  <a href="#quote" class="hero-btn">Get My Free Roof Quote →</a>
-  <p class="hero-small">⏱ Takes less than 60 seconds · No obligation · 100% free</p>
-
+  <div class="hero-badge"><span class="dot"></span> Gold Coast Local Business</div>
+  <h1>Transform Your Roof<br><span>With a Fresh Paint Upgrade</span></h1>
+  <p class="hero-sub"><strong>Tired of a faded, ageing roof?</strong> Our professional wash &amp; paint process restores and protects your roof &mdash; at a price you'll love.</p>
+  <a href="#quote" class="hero-btn">Get My Free Roof Quote &rarr;</a>
+  <p class="hero-small">&#8987; Takes less than 60 seconds &middot; No obligation &middot; 100% free</p>
   <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-num">500+</div>
-      <div class="hero-stat-label">Roofs Painted</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">500+</div><div class="hero-stat-label">Roofs Painted</div></div>
     <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">5★</div>
-      <div class="hero-stat-label">Google Rating</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">5&#9733;</div><div class="hero-stat-label">Google Rating</div></div>
     <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">100%</div>
-      <div class="hero-stat-label">Local &amp; In-House</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Local &amp; In-House</div></div>
     <div class="hero-divider"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">$0</div>
-      <div class="hero-stat-label">Obligation-Free Quotes</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-label">Obligation-Free Quotes</div></div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
 <div class="trust-bar">
-  <div class="trust-item"><span class="icon">📍</span> Gold Coast Locals</div>
-  <div class="trust-item"><span class="icon">🔧</span> In-House Team Only</div>
-  <div class="trust-item"><span class="icon">💰</span> Affordable Pricing</div>
-  <div class="trust-item"><span class="icon">🤝</span> Obligation-Free Quotes</div>
-  <div class="trust-item"><span class="icon">⭐</span> 5-Star Rated</div>
+  <div class="trust-item">&#128205; Gold Coast Locals</div>
+  <div class="trust-item">&#128295; In-House Team Only</div>
+  <div class="trust-item">&#128176; Affordable Pricing</div>
+  <div class="trust-item">&#129309; Obligation-Free Quotes</div>
+  <div class="trust-item">&#11088; 5-Star Rated</div>
 </div>
 
-<!-- PROCESS -->
 <section class="process">
   <div class="section-label">How It Works</div>
-  <h2 class="section-title">Our Simple<br>2-Step Process</h2>
+  <h2 class="section-title">Our Simple<br>4-Step Process</h2>
   <p class="section-sub">No shortcuts. No subcontractors. Just a clean, professional finish every time.</p>
-
   <div class="process-steps">
-    <div class="step">
-      <div class="step-num">01</div>
-      <h3>High-Pressure Wash</h3>
-      <p>We start with a thorough high-pressure wash to strip away dirt, moss, lichen, and all surface contaminants — ensuring the paint bonds perfectly.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">02</div>
-      <h3>Prime &amp; Seal</h3>
-      <p>Any cracked or damaged areas are repaired and a quality primer is applied to lock in the surface and ensure long-lasting adhesion.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">03</div>
-      <h3>Premium Paint</h3>
-      <p>We apply high-grade roof paint in your chosen colour — delivering a factory-fresh finish that protects against UV, rain and heat for years to come.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">04</div>
-      <h3>Final Inspection</h3>
-      <p>Our team does a thorough walkover with you to make sure you're 100% happy with the result. No job is done until you're satisfied.</p>
-    </div>
+    <div class="step"><div class="step-num">01</div><div class="step-h">Roof Wash</div><p class="step-p">We start with a thorough wash to remove dirt, moss, lichen, and all surface contaminants &mdash; ensuring the paint bonds perfectly.</p></div>
+    <div class="step"><div class="step-num">02</div><div class="step-h">Prime &amp; Seal</div><p class="step-p">Any cracked or damaged areas are repaired and a quality primer is applied to lock in the surface and ensure long-lasting adhesion.</p></div>
+    <div class="step"><div class="step-num">03</div><div class="step-h">Premium Paint</div><p class="step-p">We apply high-grade roof paint in your chosen colour &mdash; a factory-fresh finish that protects against UV, rain, and heat for years to come.</p></div>
+    <div class="step"><div class="step-num">04</div><div class="step-h">Final Inspection</div><p class="step-p">Our team does a thorough walkover with you to make sure you're 100% happy. No job is done until you're satisfied.</p></div>
   </div>
 </section>
 
-<!-- WHY US -->
 <section class="why">
   <div class="why-inner">
     <div>
       <div class="section-label">Why Stanley's</div>
       <h2 class="section-title">Gold Coast's<br>Trusted Roof<br>Painters</h2>
-      <p class="section-sub">We're not a call centre that outsources your job. Every roof is painted by our in-house team — locals who take pride in their work.</p>
-
+      <p class="section-sub">Every roof is painted by our in-house team &mdash; locals who take pride in their work.</p>
       <div class="why-points">
-        <div class="why-point">
-          <div class="why-icon">📍</div>
-          <div class="why-point-text">
-            <h4>100% Gold Coast Local</h4>
-            <p>We live, work, and operate right here on the Gold Coast. No interstate crews, no strangers at your door.</p>
-          </div>
-        </div>
-        <div class="why-point">
-          <div class="why-icon">🔧</div>
-          <div class="why-point-text">
-            <h4>In-House Team Only</h4>
-            <p>We never subcontract. Your roof is painted by our own trained painters — same quality every time.</p>
-          </div>
-        </div>
-        <div class="why-point">
-          <div class="why-icon">💰</div>
-          <div class="why-point-text">
-            <h4>Affordable, Upfront Pricing</h4>
-            <p>No hidden fees. No upsells on the day. What we quote is what you pay.</p>
-          </div>
-        </div>
-        <div class="why-point">
-          <div class="why-icon">🛡️</div>
-          <div class="why-point-text">
-            <h4>Weather Protection That Lasts</h4>
-            <p>Our premium paints and process protect your roof from harsh Queensland sun, storms, and salt air.</p>
-          </div>
-        </div>
-        <div class="why-point">
-          <div class="why-icon">🤝</div>
-          <div class="why-point-text">
-            <h4>Obligation-Free Quotes</h4>
-            <p>Get a detailed, honest quote with zero pressure. We'll never hassle you.</p>
-          </div>
-        </div>
+        <div class="why-point"><div class="why-icon">&#128205;</div><div class="why-point-text"><h4>100% Gold Coast Local</h4><p>We live, work, and operate right here on the Gold Coast. No interstate crews, no strangers at your door.</p></div></div>
+        <div class="why-point"><div class="why-icon">&#128295;</div><div class="why-point-text"><h4>In-House Team Only</h4><p>We never subcontract. Your roof is painted by our own trained painters &mdash; same quality every time.</p></div></div>
+        <div class="why-point"><div class="why-icon">&#128176;</div><div class="why-point-text"><h4>Affordable, Upfront Pricing</h4><p>No hidden fees. No upsells on the day. What we quote is what you pay.</p></div></div>
+        <div class="why-point"><div class="why-icon">&#127737;</div><div class="why-point-text"><h4>Weather Protection That Lasts</h4><p>Our premium paints protect your roof from harsh Queensland sun, storms, and salt air.</p></div></div>
+        <div class="why-point"><div class="why-icon">&#129309;</div><div class="why-point-text"><h4>Obligation-Free Quotes</h4><p>Get a detailed, honest quote with zero pressure. We'll never hassle you.</p></div></div>
       </div>
     </div>
-
-    <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center;">
-      <div class="why-quote" style="text-align: center; padding: 44px 40px;">
-        <div style="font-size: 48px; margin-bottom: 12px;">⭐⭐⭐⭐⭐</div>
-        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 900; color: var(--orange); line-height: 1;">5.0</div>
-        <div style="color: white; font-size: 18px; font-weight: 600; margin: 8px 0 4px;">Google Reviews</div>
-        <div style="color: #666; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase;">Verified Customer Ratings</div>
-        <div style="margin-top: 20px;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="height: 24px; opacity: 0.6; filter: brightness(2);">
-        </div>
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div class="rating-card">
+        <div style="font-size:40px;margin-bottom:10px;">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:60px;font-weight:900;color:var(--orange);line-height:1;">5.0</div>
+        <div style="color:white;font-size:19px;font-weight:600;margin:10px 0 4px;">Google Reviews</div>
+        <div style="color:#666;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Verified Customer Ratings</div>
+        <div style="margin-top:18px;color:#888;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">google.com</div>
       </div>
-
-      <div class="why-quote" style="text-align: center; padding: 44px 40px;">
-        <div style="font-size: 48px; margin-bottom: 12px;">⭐⭐⭐⭐⭐</div>
-        <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 900; color: var(--orange); line-height: 1;">5.0</div>
-        <div style="color: white; font-size: 18px; font-weight: 600; margin: 8px 0 4px;">Local Search Reviews</div>
-        <div style="color: #666; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase;">Verified Customer Ratings</div>
-        <div style="margin-top: 20px; color: #888; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">LocalSearch.com.au</div>
+      <div class="rating-card">
+        <div style="font-size:40px;margin-bottom:10px;">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:60px;font-weight:900;color:var(--orange);line-height:1;">5.0</div>
+        <div style="color:white;font-size:19px;font-weight:600;margin:10px 0 4px;">Local Search Reviews</div>
+        <div style="color:#666;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Verified Customer Ratings</div>
+        <div style="margin-top:18px;color:#888;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">localsearch.com.au</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SURVEY -->
 <section class="survey-section" id="quote">
   <div class="survey-wrap">
     <div class="survey-header">
-      <div class="section-label">Free Quote — 60 Seconds</div>
+      <div class="section-label">Free Quote &mdash; 60 Seconds</div>
       <h2 class="section-title">Get Your Roof<br>Quote Now</h2>
-      <p style="color: var(--text-muted); font-size: 16px; margin-top: 8px;">Answer 2 quick questions and we'll be in touch with your personalised quote.</p>
+      <p style="color:var(--text-muted);font-size:16px;margin-top:8px;">Answer 2 quick questions and we'll be in touch with your personalised quote.</p>
     </div>
-
     <div class="survey-card">
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill" style="width: 33%"></div>
-      </div>
+      <div class="progress-bar"><div class="progress-fill" id="pBar"></div></div>
       <div class="survey-body">
 
-        <!-- STEP 1: Roof Type -->
-        <div id="step1" class="survey-step">
-          <div class="step-indicator">Step 1 of 3</div>
-          <h3 class="survey-q">What type of roof<br>do you have?</h3>
-          <p class="survey-hint">Select the option that best describes your roof material.</p>
-          <div class="options-grid">
-            <button class="option-card" onclick="selectOption('roofType', 'Tile', this)">
-              <span class="option-emoji">🏠</span>
-              <div class="option-text">
-                <div class="option-title">Tile Roof</div>
-                <div class="option-desc">Terracotta, concrete, or slate tiles</div>
-              </div>
-              <div class="option-check">✓</div>
+        <div id="p1" class="pane on">
+          <div class="step-ind">Step 1 of 3</div>
+          <div class="survey-q">What type of roof<br>do you have?</div>
+          <div class="survey-hint">Select the option that best describes your roof material.</div>
+          <div class="opts" id="g1">
+            <button class="opt" data-v="Tile">
+              <span class="opt-emoji">&#127968;</span>
+              <div class="opt-txt"><div class="opt-title">Tile Roof</div><div class="opt-desc">Terracotta, concrete, or slate tiles</div></div>
+              <div class="opt-chk">&#10003;</div>
             </button>
-            <button class="option-card" onclick="selectOption('roofType', 'Tin / Colorbond', this)">
-              <span class="option-emoji">🔩</span>
-              <div class="option-text">
-                <div class="option-title">Tin / Colorbond Roof</div>
-                <div class="option-desc">Metal, corrugated iron, or Colorbond steel</div>
-              </div>
-              <div class="option-check">✓</div>
+            <button class="opt" data-v="Tin / Colorbond">
+              <span class="opt-emoji">&#128297;</span>
+              <div class="opt-txt"><div class="opt-title">Tin / Colorbond Roof</div><div class="opt-desc">Metal, corrugated iron, or Colorbond steel</div></div>
+              <div class="opt-chk">&#10003;</div>
             </button>
-
           </div>
-          <div class="survey-nav">
-            <button class="btn-next" id="nextBtn1" onclick="goToStep(2)" disabled>
-              Next Step <span class="arrow">→</span>
+          <div class="snav"><button class="btn-next" id="n1" disabled>Next Step &rarr;</button></div>
+        </div>
+
+        <div id="p2" class="pane">
+          <div class="step-ind">Step 2 of 3</div>
+          <div class="survey-q">What service are<br>you looking for?</div>
+          <div class="survey-hint">Select the option that best matches what you need.</div>
+          <div class="opts" id="g2">
+            <button class="opt" data-v="Roof Painting Only">
+              <span class="opt-emoji">&#127912;</span>
+              <div class="opt-txt"><div class="opt-title">Roof Painting Only</div><div class="opt-desc">Full wash and repaint of my roof</div></div>
+              <div class="opt-chk">&#10003;</div>
             </button>
+            <button class="opt" data-v="Roof + Gutters">
+              <span class="opt-emoji">&#127969;</span>
+              <div class="opt-txt"><div class="opt-title">Roof + Gutters</div><div class="opt-desc">Roof painting plus gutter painting</div></div>
+              <div class="opt-chk">&#10003;</div>
+            </button>
+          </div>
+          <div class="snav">
+            <button class="btn-back" id="b2">&larr; Back</button>
+            <button class="btn-next" id="n2" disabled>Next Step &rarr;</button>
           </div>
         </div>
 
-        <!-- STEP 2: Service -->
-        <div id="step2" class="survey-step" style="display:none">
-          <div class="step-indicator">Step 2 of 3</div>
-          <h3 class="survey-q">What service are<br>you looking for?</h3>
-          <p class="survey-hint">Select all that apply to get the most accurate quote.</p>
-          <div class="options-grid">
-            <button class="option-card" onclick="selectOption('service', 'Roof Painting Only', this)">
-              <span class="option-emoji">🎨</span>
-              <div class="option-text">
-                <div class="option-title">Roof Painting Only</div>
-                <div class="option-desc">Full wash and repaint of my roof</div>
-              </div>
-              <div class="option-check">✓</div>
-            </button>
-            <button class="option-card" onclick="selectOption('service', 'Roof + Gutters', this)">
-              <span class="option-emoji">🏡</span>
-              <div class="option-text">
-                <div class="option-title">Roof + Gutters</div>
-                <div class="option-desc">Roof painting plus gutter painting or replacement</div>
-              </div>
-              <div class="option-check">✓</div>
-            </button>
-          </div>
-          <div class="survey-nav">
-            <button class="btn-back" onclick="goToStep(1)">← Back</button>
-            <button class="btn-next" id="nextBtn2" onclick="goToStep(3)" disabled>
-              Next Step <span class="arrow">→</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- STEP 3: Contact -->
-        <div id="step3" class="survey-step" style="display:none">
-          <div class="step-indicator">Step 3 of 3</div>
-
-          <div class="summary-pills" id="summaryPills"></div>
-
-          <h3 class="survey-q">Almost done!<br>How should we<br>get in touch?</h3>
-          <p class="survey-hint">Your details are 100% private and we'll never spam you.</p>
-
+        <div id="p3" class="pane">
+          <div class="step-ind">Step 3 of 3</div>
+          <div class="pills" id="pills"></div>
+          <div class="survey-q">Almost done!<br>How should we<br>get in touch?</div>
+          <div class="survey-hint">Your details are 100% private and we'll never spam you.</div>
           <div class="form-grid">
-            <div class="form-group">
-              <label>Your Full Name</label>
-              <input type="text" id="name" placeholder="e.g. John Smith" oninput="checkForm()">
-            </div>
-            <div class="form-group">
-              <label>Mobile Number</label>
-              <input type="tel" id="phone" placeholder="e.g. 0412 345 678" oninput="checkForm()">
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" id="email" placeholder="e.g. john@email.com" oninput="checkForm()">
-            </div>
-            <div class="form-group">
-              <label>Your Suburb</label>
-              <input type="text" id="suburb" placeholder="e.g. Robina, Burleigh, Broadbeach..." oninput="checkForm()">
-            </div>
+            <div class="fg"><label>Your Full Name</label><input type="text" id="fName" placeholder="e.g. John Smith"></div>
+            <div class="fg"><label>Mobile Number</label><input type="tel" id="fPhone" placeholder="e.g. 0412 345 678"></div>
+            <div class="fg"><label>Email Address</label><input type="email" id="fEmail" placeholder="e.g. john@email.com"></div>
+            <div class="fg"><label>Your Suburb</label><input type="text" id="fSuburb" placeholder="e.g. Robina, Burleigh, Broadbeach..."></div>
           </div>
-
-          <div class="survey-nav">
-            <button class="btn-back" onclick="goToStep(2)">← Back</button>
-            <button class="btn-next" id="nextBtn3" onclick="submitForm()" disabled>
-              🎉 Get My Free Quote
-            </button>
+          <div class="snav">
+            <button class="btn-back" id="b3">&larr; Back</button>
+            <button class="btn-next" id="n3" disabled>&#127881; Get My Free Quote</button>
           </div>
         </div>
 
-        <!-- THANK YOU -->
-        <div id="thankyou" class="thankyou">
-          <div class="thankyou-icon">🎉</div>
-          <h2>You're All Set!</h2>
-          <p>Thanks! We've received your details and one of our friendly Gold Coast team members will be in touch very shortly with your personalised roof painting quote.</p>
-          <p style="margin-bottom: 24px; font-weight: 600; color: var(--charcoal);">Can't wait? Give us a call now:</p>
-          <a href="tel:0406665708" class="thankyou-number">📞 0406 665 708</a>
+        <div id="p4" class="pane">
+          <div class="ty">
+            <div class="ty-icon">&#127881;</div>
+            <h2>You're All Set!</h2>
+            <p>Thanks! One of our friendly Gold Coast team members will be in touch very shortly with your personalised roof painting quote.</p>
+            <p style="font-weight:600;color:var(--charcoal);">Can't wait? Call us now:</p>
+            <a href="tel:0406665708" class="ty-call">&#128222; 0406 665 708</a>
+          </div>
         </div>
 
       </div>
@@ -1088,112 +341,134 @@
   </div>
 </section>
 
-<!-- BOTTOM CTA -->
 <section class="bottom-cta">
   <h2>Ready to Love<br>Your Roof Again?</h2>
   <p>Join hundreds of Gold Coast homeowners who've trusted Stanley's.</p>
-  <a href="#quote" class="btn-dark">Start My Free Quote →</a>
+  <a href="#quote" class="btn-dark">Start My Free Quote &rarr;</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services">
-  <p>Gold Coast, QLD · <a href="tel:0406665708">0406 665 708</a> · <a href="/cdn-cgi/l/email-protection#375458594356544377444356595b524e4447565e59435e59501954585a195642"><span class="__cf_email__" data-cfemail="b8dbd7d6ccd9dbccf8cbccd9d6d4ddc1cbc8d9d1d6ccd1d6df96dbd7d596d9cd">[email&#160;protected]</span></a></p>
-  <p style="margin-top: 12px;">&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
+  <p>Gold Coast, QLD &middot; <a href="tel:0406665708">0406 665 708</a> &middot; <a href="mailto:contact@stanleyspainting.com.au">contact@stanleyspainting.com.au</a></p>
+  <p style="margin-top:12px;">&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
   <p>Website by <a href="https://quoteleads.com.au" target="_blank">QuoteLeads</a></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Survey state
-  const answers = { roofType: null, service: null };
+<script>
+(function () {
+  var roofType = null;
+  var service  = null;
 
-  function selectOption(field, value, el) {
-    answers[field] = value;
-
-    // Highlight selected
-    el.closest('.options-grid').querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-    el.classList.add('selected');
-
-    // Enable next
-    if (field === 'roofType') document.getElementById('nextBtn1').disabled = false;
-    if (field === 'service') document.getElementById('nextBtn2').disabled = false;
+  function setProgress(pct) {
+    document.getElementById('pBar').style.width = pct + '%';
   }
 
-  function goToStep(n) {
-    // Hide all steps
-    [1,2,3].forEach(i => {
-      const el = document.getElementById('step' + i);
-      if (el) el.style.display = 'none';
+  function showPane(id) {
+    var ids = ['p1','p2','p3','p4'];
+    ids.forEach(function(x) {
+      var el = document.getElementById(x);
+      el.classList.remove('on');
+      el.style.display = 'none';
     });
-
-    // Show target step
-    const target = document.getElementById('step' + n);
-    if (target) {
-      target.style.display = 'block';
-      target.className = 'survey-step'; // re-trigger animation
-      void target.offsetWidth;
-      target.className = 'survey-step survey-step';
-    }
-
-    // Update progress
-    const pct = n === 1 ? 33 : n === 2 ? 66 : 100;
-    document.getElementById('progressFill').style.width = pct + '%';
-
-    // Update summary pills on step 3
-    if (n === 3) {
-      const pills = document.getElementById('summaryPills');
-      pills.innerHTML = '';
-      if (answers.roofType) pills.innerHTML += `<span class="pill">🏠 ${answers.roofType}</span>`;
-      if (answers.service) pills.innerHTML += `<span class="pill">🎨 ${answers.service}</span>`;
-    }
-
-    // Scroll to survey
+    var target = document.getElementById(id);
+    target.style.display = 'block';
+    void target.offsetWidth;
+    target.classList.add('on');
     document.getElementById('quote').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  // Grid 1 — roof type
+  document.getElementById('g1').addEventListener('click', function (e) {
+    var btn = e.target.closest('.opt');
+    if (!btn) return;
+    document.querySelectorAll('#g1 .opt').forEach(function(o){ o.classList.remove('sel'); });
+    btn.classList.add('sel');
+    roofType = btn.getAttribute('data-v');
+    document.getElementById('n1').disabled = false;
+  });
+
+  // Grid 2 — service
+  document.getElementById('g2').addEventListener('click', function (e) {
+    var btn = e.target.closest('.opt');
+    if (!btn) return;
+    document.querySelectorAll('#g2 .opt').forEach(function(o){ o.classList.remove('sel'); });
+    btn.classList.add('sel');
+    service = btn.getAttribute('data-v');
+    document.getElementById('n2').disabled = false;
+  });
+
+  // Form validation
   function checkForm() {
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const suburb = document.getElementById('suburb').value.trim();
-    document.getElementById('nextBtn3').disabled = !(name && phone && email && suburb);
+    var ok = document.getElementById('fName').value.trim() &&
+             document.getElementById('fPhone').value.trim() &&
+             document.getElementById('fEmail').value.trim() &&
+             document.getElementById('fSuburb').value.trim();
+    document.getElementById('n3').disabled = !ok;
   }
+  ['fName','fPhone','fEmail','fSuburb'].forEach(function(id) {
+    document.getElementById(id).addEventListener('input', checkForm);
+  });
 
-  function submitForm() {
-    const btn = document.getElementById('nextBtn3');
-    btn.textContent = 'Submitting...';
+  // Step 1 next
+  document.getElementById('n1').addEventListener('click', function () {
+    setProgress(66);
+    showPane('p2');
+  });
+
+  // Step 2 next
+  document.getElementById('n2').addEventListener('click', function () {
+    var pillsEl = document.getElementById('pills');
+    pillsEl.innerHTML = '';
+    if (roofType) { var a = document.createElement('span'); a.className='pill'; a.textContent=roofType; pillsEl.appendChild(a); }
+    if (service)  { var b = document.createElement('span'); b.className='pill'; b.textContent=service;  pillsEl.appendChild(b); }
+    setProgress(100);
+    showPane('p3');
+  });
+
+  // Back buttons
+  document.getElementById('b2').addEventListener('click', function () { setProgress(33); showPane('p1'); });
+  document.getElementById('b3').addEventListener('click', function () { setProgress(66); showPane('p2'); });
+
+  // Submit
+  document.getElementById('n3').addEventListener('click', function () {
+    var btn = document.getElementById('n3');
     btn.disabled = true;
+    btn.textContent = 'Sending...';
 
-    const payload = {
-      roofType: answers.roofType,
-      service: answers.service,
-      name: document.getElementById('name').value.trim(),
-      phone: document.getElementById('phone').value.trim(),
-      email: document.getElementById('email').value.trim(),
-      suburb: document.getElementById('suburb').value.trim(),
-      source: 'Facebook Ad - Roof Painting LP',
+    var payload = {
+      roofType : roofType,
+      service  : service,
+      name     : document.getElementById('fName').value.trim(),
+      phone    : document.getElementById('fPhone').value.trim(),
+      email    : document.getElementById('fEmail').value.trim(),
+      suburb   : document.getElementById('fSuburb').value.trim(),
+      source   : 'Facebook Ad - Roof Painting LP',
       timestamp: new Date().toISOString()
     };
 
     fetch('https://hook.eu2.make.com/149ptmxvjd7vqrpwy1peek8ab7papa65', {
-      method: 'POST',
+      method : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
-    .then(() => showThankYou())
-    .catch(() => showThankYou()); // show thank you even if network hiccup
+      body   : JSON.stringify(payload)
+    }).then(finish).catch(finish);
 
-    // FB Lead event
     if (typeof fbq !== 'undefined') {
-      fbq('track', 'Lead', {
-        content_name: 'Roof Painting Quote',
-        content_category: 'Roof Painting',
-      });
+      fbq('track', 'Lead', { content_name: 'Roof Painting Quote', content_category: 'Roof Painting' });
     }
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'generate_lead', { event_category: 'Roof Painting', event_label: 'Quote Submitted' });
+    }
+  });
+
+  function finish() {
+    setProgress(100);
+    showPane('p4');
   }
 
-  function showThankYou() {
-    // Hide all steps
-    [1,2,3].forEach(i => {
-      const el = document.getElementById('step' + i);
-      if (el) el.style.dis
+  // Init progress
+  setProgress(33);
+}());
+</script>
+
+</body>
+</html>
