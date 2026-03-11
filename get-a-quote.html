@@ -3,15 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stanley's Painting Services - Gold Coast's trusted painting experts. Professional interior, exterior, roof, and driveway painting services across Gold Coast, QLD.">
-  <meta name="keywords" content="Gold Coast painters, painting services Gold Coast, interior painting, exterior painting, roof painting, residential painting, commercial painting">
-  <title>Gold Coast Painters You Can Trust | Stanley's Painting Services</title>
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap " rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/avenir " rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500 ;600&display=swap" rel="stylesheet">
-  
+  <title>Get a Free Quote | Stanley's Painting Services</title>
+  <meta name="description" content="Get a free painting quote from Stanley's Painting Services. Tell us about your project and we'll be in touch with a detailed, obligation-free quote.">
+
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -21,749 +15,533 @@
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js ');
+    'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '977805120850078');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=977805120850078&ev=PageView&noscript=1 "
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-  
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=977805120850078&ev=PageView&noscript=1"/></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --orange: #F69E3D;
+      --orange-dark: #e08828;
+      --orange-light: #fdb96a;
+      --charcoal: #1c1c1e;
+      --dark: #111;
+      --light-bg: #fafaf8;
+      --text-muted: #666;
+      --border: #e8e4de;
     }
-    
-    body {
-      font-family: 'Avenir', Arial, sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-      color: #333;
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; font-weight: 300; background: var(--light-bg); color: var(--charcoal); overflow-x: hidden; }
+
+    /* ── HEADER ── */
+    header { background: var(--charcoal); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+    header img { height: 48px; }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a { color: #aaa; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: white; }
+    .header-cta { background: var(--orange); color: white; padding: 10px 22px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .header-cta:hover { background: var(--orange-dark); }
+
+    /* ── SURVEY SECTION ── */
+    .survey-section {
+      padding: 80px 24px 100px;
+      position: relative;
+      overflow: hidden;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;
+    .survey-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 360px;
+      background: var(--charcoal);
+      z-index: 0;
     }
-    
-    /* Header */
-    header {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    .survey-section::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 360px;
+      background: radial-gradient(ellipse 80% 80% at 50% 100%, rgba(246,158,61,0.2) 0%, transparent 70%);
+      z-index: 0;
     }
-    
-    .header-container {
-      max-width: 1200px;
+
+    .survey-wrap {
+      max-width: 660px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .survey-header { text-align: center; margin-bottom: 48px; }
+    .section-label { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--orange-light); margin-bottom: 12px; }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(38px, 5vw, 58px);
+      text-transform: uppercase;
+      line-height: 1;
+      color: white;
+      margin-bottom: 12px;
+    }
+    .survey-header p { color: #888; font-size: 16px; }
+
+    /* ── SURVEY CARD ── */
+    .survey-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    .progress-bar { height: 5px; background: #f0ede8; }
+    .progress-fill { height: 100%; background: var(--orange); transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+
+    .survey-body { padding: 52px 48px; }
+
+    .step-indicator { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+
+    .survey-q {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      line-height: 1.1;
+    }
+
+    .survey-hint { color: var(--text-muted); font-size: 14px; margin-bottom: 32px; }
+
+    /* Option cards */
+    .options-grid { display: grid; gap: 14px; }
+
+    .option-card {
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      cursor: pointer;
+      transition: all 0.2s;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 15px 20px;
-    }
-    
-    .logo img {
-      height: 60px;
-    }
-    
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    
-    nav a:hover {
-      color: #F69E3D;
-    }
-    
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 28px;
-      cursor: pointer;
-      color: #333;
-    }
-    
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #F69E3D 0%, #f5a623 100%);
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-    
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .cta-button {
-      display: inline-block;
+      gap: 16px;
       background: white;
-      color: #F69E3D;
-      padding: 15px 40px;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 30px;
-      font-size: 18px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-    
-    /* Why Trust Us Section */
-    .why-trust {
-      max-width: 1200px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-    
-    .why-trust h2 {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 50px;
-      color: #333;
-    }
-    
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
-    }
-    
-    .benefit-card {
-      text-align: center;
-      padding: 30px;
-      background: #f9f9f9;
-      border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .benefit-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-    
-    .benefit-card h3 {
-      color: #F69E3D;
-      font-size: 24px;
-      margin-bottom: 15px;
-    }
-    
-    .benefit-card p {
-      font-size: 16px;
-      line-height: 1.8;
-    }
-    
-    /* Services Preview */
-    .services-preview {
-      background: #f5f5f5;
-      padding: 80px 20px;
-    }
-    
-    .services-preview h2 {
-      text-align: center;
-      font-size: 42px;
-      margin-bottom: 50px;
-      color: #333;
-    }
-    
-    .services-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    
-    .service-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-8px);
-    }
-    
-    .service-card img {
+      text-align: left;
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      font-family: 'DM Sans', sans-serif;
     }
-    
-    .service-card-content {
-      padding: 25px;
-      text-align: center;
-    }
-    
-    .service-card h3 {
-      color: #F69E3D;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-    
-    /* CTA Section */
-    .cta-section {
-      background: #F69E3D;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    
-    .cta-section h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    
-    .cta-section p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    
-    .cta-white {
-      background: white;
-      color: #F69E3D;
-    }
-    
-    /* Quote Page Specific Styles */
-    .quote-page {
-      background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
-      min-height: calc(100vh - 200px);
-      padding: 60px 20px;
-    }
-    
-    .quote-container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .quote-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    
-    .quote-header h1 {
-      font-size: 42px;
-      color: #333;
-      margin-bottom: 15px;
-    }
-    
-    .quote-header p {
-      font-size: 18px;
-      color: #666;
-    }
-    
-    /* Form Styles */
-    .form-step {
-      display: none;
-    }
-    
-    .form-step.active {
-      display: block;
-    }
+    .option-card:hover { border-color: var(--orange); background: rgba(246,158,61,0.04); }
+    .option-card.selected { border-color: var(--orange); background: rgba(246,158,61,0.08); }
 
-    .multi-step-form {
-      font-family: 'Poppins', sans-serif;
-      max-width: 500px;
-      margin: auto;
-      padding: 40px;
-      border-radius: 15px;
-      background: #fff;
-      color: #000;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    .option-emoji { font-size: 28px; width: 40px; text-align: center; }
+    .option-text { flex: 1; }
+    .option-title { font-weight: 600; font-size: 16px; color: var(--charcoal); margin-bottom: 2px; }
+    .option-desc { font-size: 13px; color: var(--text-muted); }
+    .option-check {
+      width: 24px; height: 24px;
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px;
     }
+    .option-card.selected .option-check { background: var(--orange); border-color: var(--orange); color: white; }
 
-    .form-step label {
-      display: block;
-      text-align: center;
-      font-weight: 600;
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    input, button {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      margin-top: 15px;
-      font-size: 16px;
-      font-family: 'Poppins', sans-serif;
+    /* Form fields */
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--charcoal); letter-spacing: 0.3px; }
+    .form-group input {
+      border: 2px solid var(--border);
       border-radius: 10px;
-      border: 2px solid #e0e0e0;
-      background: white;
-      color: black;
-      transition: all 0.3s;
-    }
-    
-    input:focus {
+      padding: 14px 18px;
+      font-size: 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      transition: border-color 0.2s;
       outline: none;
-      border-color: #F69E3D;
-      box-shadow: 0 0 0 3px rgba(246,158,61,0.1);
+      background: #fafaf8;
+      color: var(--charcoal);
     }
+    .form-group input:focus { border-color: var(--orange); background: white; }
+    .form-group input::placeholder { color: #bbb; }
 
-    .select-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
-    }
+    /* Summary pills */
+    .summary-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .pill { background: rgba(246,158,61,0.1); border: 1px solid rgba(246,158,61,0.3); color: var(--orange-dark); padding: 5px 14px; border-radius: 100px; font-size: 13px; font-weight: 600; }
 
-    .select-option {
-      flex: 1 1 45%;
-      background: #f8f8f8;
-      padding: 18px;
-      text-align: center;
-      border-radius: 10px;
-      cursor: pointer;
-      border: 2px solid #e0e0e0;
-      color: #333;
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-
-    .select-option:hover {
-      background: #fff;
-      border-color: #F69E3D;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(246,158,61,0.2);
-    }
-
-    .select-option.selected {
-      background: #F69E3D;
-      border-color: #F69E3D;
+    /* Nav buttons */
+    .survey-nav { display: flex; gap: 12px; margin-top: 32px; }
+    .btn-back { padding: 14px 24px; border: 2px solid var(--border); border-radius: 10px; background: white; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--text-muted); transition: all 0.2s; }
+    .btn-back:hover { border-color: #aaa; color: var(--charcoal); }
+    .btn-next {
+      flex: 1;
+      padding: 16px 24px;
+      background: var(--orange);
       color: white;
-      font-weight: 600;
-      transform: scale(1.05);
-      box-shadow: 0 5px 20px rgba(246,158,61,0.4);
-    }
-
-    button {
-      background: #F69E3D;
-      color: white;
-      font-weight: 600;
       border: none;
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.3s;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-next:hover { background: var(--orange-dark); }
+    .btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* Thank you */
+    .thankyou { display: none; text-align: center; padding: 64px 48px; }
+    .thankyou-icon {
+      width: 80px; height: 80px;
+      background: rgba(246,158,61,0.1);
+      border: 2px solid rgba(246,158,61,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 28px;
+      animation: pop-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    }
+    @keyframes pop-in {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .thankyou h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 44px; font-weight: 900; text-transform: uppercase; color: var(--charcoal); margin-bottom: 12px; }
+    .thankyou p { color: var(--text-muted); font-size: 16px; line-height: 1.7; max-width: 380px; margin: 0 auto 28px; }
+    .thankyou-number { display: inline-block; background: var(--charcoal); color: white; padding: 14px 32px; border-radius: 8px; font-size: 18px; font-weight: 700; text-decoration: none; }
+
+    /* Trust items below card */
+    .survey-trust { display: flex; justify-content: center; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+    .survey-trust-item { display: flex; align-items: center; gap: 6px; color: #888; font-size: 13px; }
+
+    /* Slide animation */
+    .survey-step { animation: slide-in 0.35s cubic-bezier(0.4, 0, 0.2, 1) both; }
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
-    button:hover {
-      background: #d4881c;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(246,158,61,0.4);
-    }
+    /* ── FOOTER ── */
+    footer { background: var(--dark); padding: 56px 24px 32px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid #222; }
+    .footer-brand img { height: 48px; margin-bottom: 16px; display: block; }
+    .footer-brand p { color: #555; font-size: 14px; line-height: 1.7; max-width: 280px; margin-bottom: 20px; }
+    .footer-contact-item { display: flex; align-items: center; gap: 10px; color: #888; font-size: 14px; margin-bottom: 8px; text-decoration: none; }
+    .footer-contact-item:hover { color: var(--orange); }
+    .footer-col h4 { color: white; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .footer-col a { display: block; color: #555; text-decoration: none; font-size: 14px; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); }
+    .footer-bottom { max-width: 1100px; margin: 24px auto 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { color: #444; font-size: 13px; }
+    .footer-bottom a { color: var(--orange); text-decoration: none; }
 
-    .back-btn {
-      background: transparent;
-      border: 2px solid #F69E3D;
-      color: #F69E3D;
-      font-weight: 500;
-    }
-    
-    .back-btn:hover {
-      background: #F69E3D;
-      color: white;
-    }
-
-    #thankYouMessage {
-      text-align: center;
-      padding: 50px 30px;
-    }
-    
-    #thankYouMessage h3 {
-      font-size: 32px;
-      color: #F69E3D;
-      margin-bottom: 20px;
-    }
-    
-    #thankYouMessage p {
-      font-size: 18px;
-      color: #666;
-      line-height: 1.8;
-    }
-    
-    /* Progress Indicator */
-    .progress-bar {
-      width: 100%;
-      height: 6px;
-      background: #e0e0e0;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      overflow: hidden;
-    }
-    
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #F69E3D 0%, #f5a623 100%);
-      transition: width 0.3s ease;
-      border-radius: 10px;
-    }
-    
-    /* Footer */
-    footer {
-      background: #1a1a1a;
-      color: white;
-      padding: 40px 20px 20px;
-    }
-    
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 30px;
-    }
-    
-    .footer-logo img {
-      height: 80px;
-      margin-bottom: 20px;
-    }
-    
-    .footer-section h4 {
-      color: #F69E3D;
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-    
-    .footer-section ul {
-      list-style: none;
-    }
-    
-    .footer-section ul li {
-      margin-bottom: 10px;
-    }
-    
-    .footer-section a {
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-section a:hover {
-      color: #F69E3D;
-    }
-    
-    .reviews {
-      margin-top: 10px;
-      color: #FFD700;
-      font-size: 18px;
-    }
-    
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid #333;
-      padding-top: 20px;
-      margin-top: 30px;
-      font-size: 14px;
-    }
-    
-    .footer-bottom p {
-      margin-bottom: 5px;
-    }
-    
-    .footer-bottom a {
-      color: #F69E3D;
-      text-decoration: none;
-    }
-    
-    .footer-bottom a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-      }
-      
-      nav ul.active {
-        display: flex;
-      }
-      
-      .mobile-menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        box-shadow: none;
-        color: #333;
-        width: auto;
-        padding: 0;
-        margin: 0;
-      }
-      
-      .mobile-menu-btn:hover {
-        background: none;
-        box-shadow: none;
-        transform: none;
-      }
-      
-      .hero h1 {
-        font-size: 32px;
-      }
-      
-      .hero p {
-        font-size: 18px;
-      }
-      
-      .why-trust h2,
-      .services-preview h2 {
-        font-size: 32px;
-      }
-
-      .quote-header h1 {
-        font-size: 32px;
-      }
-      
-      .multi-step-form {
-        padding: 30px 20px;
-      }
-      
-      .select-option {
-        flex: 1 1 100%;
-      }
-      
-      .footer-container {
-        grid-template-columns: 1fr;
-      }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) { nav { display: none; } .footer-inner { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) {
+      .survey-body { padding: 36px 24px; }
+      .thankyou { padding: 48px 24px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .survey-trust { gap: 16px; }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO.png " alt="Stanley's Painting Services Logo">
-        </a>
-      </div>
-      <nav>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-        <ul id="navMenu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="service-areas.html">Service Areas</a></li>
-          <li><a href="get-a-quote.html">Get a Quote</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+
+<!-- HEADER -->
+<header>
+  <a href="/"><img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services"></a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/services.html">Services</a>
+    <a href="/service-areas.html">Service Areas</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+  <a href="/get-a-quote.html" class="header-cta active" style="background:var(--orange-dark);">Get Free Quote →</a>
+</header>
+
+<!-- SURVEY -->
+<section class="survey-section">
+  <div class="survey-wrap">
+    <div class="survey-header">
+      <div class="section-label">Free Quote — No Obligation</div>
+      <h2 class="section-title">Get a Free<br>Painting Quote</h2>
+      <p>Tell us about your project and we'll provide you with a detailed quote.</p>
     </div>
-  </header>
 
-  <!-- Quote Page -->
-  <section class="quote-page">
-    <div class="quote-container">
-      <div class="quote-header">
-        <h1>Get a Free Painting Quote</h1>
-        <p>Tell us about your project and we'll provide you with a detailed quote</p>
+    <div class="survey-card">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill" style="width:20%"></div>
       </div>
+      <div class="survey-body">
 
-      <div class="multi-step-form">
-        <div class="progress-bar">
-          <div class="progress-fill" id="progressFill" style="width: 20%"></div>
+        <!-- STEP 1: Project Type -->
+        <div id="step1" class="survey-step">
+          <div class="step-indicator">Step 1 of 5</div>
+          <h3 class="survey-q">What project are you<br>looking to complete?</h3>
+          <p class="survey-hint">Select the type of painting service you need.</p>
+          <div class="options-grid">
+            <button class="option-card" onclick="selectOption('projectType', 'Interior Painting', this)">
+              <span class="option-emoji">🛋️</span>
+              <div class="option-text">
+                <div class="option-title">Interior Painting</div>
+                <div class="option-desc">Walls, ceilings, trim and more inside your property</div>
+              </div>
+              <div class="option-check">✓</div>
+            </button>
+            <button class="option-card" onclick="selectOption('projectType', 'Exterior Painting', this)">
+              <span class="option-emoji">🏠</span>
+              <div class="option-text">
+                <div class="option-title">Exterior Painting</div>
+                <div class="option-desc">Outside of your home or commercial property</div>
+              </div>
+              <div class="option-check">✓</div>
+            </button>
+            <button class="option-card" onclick="selectOption('projectType', 'Roof Painting', this)">
+              <span class="option-emoji">🔩</span>
+              <div class="option-text">
+                <div class="option-title">Roof Painting</div>
+                <div class="option-desc">Tile, Colorbond or metal roof restoration</div>
+              </div>
+              <div class="option-check">✓</div>
+            </button>
+            <button class="option-card" onclick="selectOption('projectType', 'Other', this)">
+              <span class="option-emoji">✏️</span>
+              <div class="option-text">
+                <div class="option-title">Other</div>
+                <div class="option-desc">Driveways, fences, decks or something else</div>
+              </div>
+              <div class="option-check">✓</div>
+            </button>
+          </div>
+          <div class="survey-nav">
+            <button class="btn-next" id="nextBtn1" onclick="goToStep(2)" disabled>
+              Next Step →
+            </button>
+          </div>
         </div>
-        
-        <form id="stanleyForm">
-          <div class="form-step active">
-            <label>What project are you looking to have completed?</label>
-            <div class="select-group" data-name="project_type">
-              <div class="select-option" data-value="Interior Painting">Interior Painting</div>
-              <div class="select-option" data-value="Exterior Painting">Exterior Painting</div>
-              <div class="select-option" data-value="Roof Painting">Roof Painting</div>
-              <div class="select-option" data-value="Other">Other</div>
-            </div>
-            <input type="hidden" name="project_type" required />
-            <button type="button" onclick="nextStep()">Next</button>
-          </div>
 
-          <div class="form-step">
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder="Enter your full name" required />
-            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
-            <button type="button" onclick="nextStep()">Next</button>
+        <!-- STEP 2: Name -->
+        <div id="step2" class="survey-step" style="display:none">
+          <div class="step-indicator">Step 2 of 5</div>
+          <div class="summary-pills" id="summaryPills2"></div>
+          <h3 class="survey-q">What's your<br>name?</h3>
+          <p class="survey-hint">So we know who we're talking to.</p>
+          <div class="form-group">
+            <label>Your Full Name</label>
+            <input type="text" id="name" placeholder="e.g. John Smith" oninput="checkStep2()">
           </div>
+          <div class="survey-nav">
+            <button class="btn-back" onclick="goToStep(1)">← Back</button>
+            <button class="btn-next" id="nextBtn2" onclick="goToStep(3)" disabled>Next Step →</button>
+          </div>
+        </div>
 
-          <div class="form-step">
+        <!-- STEP 3: Email -->
+        <div id="step3" class="survey-step" style="display:none">
+          <div class="step-indicator">Step 3 of 5</div>
+          <div class="summary-pills" id="summaryPills3"></div>
+          <h3 class="survey-q">Your email<br>address?</h3>
+          <p class="survey-hint">We'll send your quote directly to your inbox.</p>
+          <div class="form-group">
             <label>Email Address</label>
-            <input type="email" name="email" placeholder="your@email.com" required />
-            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
-            <button type="button" onclick="nextStep()">Next</button>
+            <input type="email" id="email" placeholder="e.g. john@email.com" oninput="checkStep3()">
           </div>
-
-          <div class="form-step">
-            <label>Phone Number</label>
-            <input type="text" name="phone" placeholder="0400 000 000" required />
-            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
-            <button type="button" onclick="nextStep()">Next</button>
+          <div class="survey-nav">
+            <button class="btn-back" onclick="goToStep(2)">← Back</button>
+            <button class="btn-next" id="nextBtn3" onclick="goToStep(4)" disabled>Next Step →</button>
           </div>
+        </div>
 
-          <div class="form-step">
+        <!-- STEP 4: Phone -->
+        <div id="step4" class="survey-step" style="display:none">
+          <div class="step-indicator">Step 4 of 5</div>
+          <div class="summary-pills" id="summaryPills4"></div>
+          <h3 class="survey-q">Your phone<br>number?</h3>
+          <p class="survey-hint">So we can call to discuss your project and provide an accurate quote.</p>
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" id="phone" placeholder="e.g. 0412 345 678" oninput="checkStep4()">
+          </div>
+          <div class="survey-nav">
+            <button class="btn-back" onclick="goToStep(3)">← Back</button>
+            <button class="btn-next" id="nextBtn4" onclick="goToStep(5)" disabled>Next Step →</button>
+          </div>
+        </div>
+
+        <!-- STEP 5: Address -->
+        <div id="step5" class="survey-step" style="display:none">
+          <div class="step-indicator">Step 5 of 5</div>
+          <div class="summary-pills" id="summaryPills5"></div>
+          <h3 class="survey-q">Property<br>address?</h3>
+          <p class="survey-hint">This helps us give you the most accurate quote possible.</p>
+          <div class="form-group">
             <label>Property Address</label>
-            <input type="text" name="address" placeholder="123 Example Street, Gold Coast" required />
-            <button type="button" class="back-btn" onclick="prevStep()">Back</button>
-            <button type="submit">Submit Quote Request</button>
+            <input type="text" id="address" placeholder="e.g. 12 Example St, Robina QLD 4226" oninput="checkStep5()">
           </div>
-        </form>
-
-        <div id="thankYouMessage" style="display:none;">
-          <h3>Thanks, you're all set! ✓</h3>
-          <p>Our team will be in touch shortly during business hours to discuss your painting project and provide you with a detailed quote.</p>
+          <div class="survey-nav">
+            <button class="btn-back" onclick="goToStep(4)">← Back</button>
+            <button class="btn-next" id="nextBtn5" onclick="submitForm()" disabled>🎉 Send My Quote Request</button>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png " alt="Stanley's Painting Services">
-        <p>Gold Coast, QLD</p>
-        <div class="reviews">
-          ⭐⭐⭐⭐⭐ 5 Star Google Reviews<br>
-          ⭐⭐⭐⭐⭐ 5 Star Local Search Reviews
+        <!-- THANK YOU -->
+        <div id="thankyou" class="thankyou">
+          <div class="thankyou-icon">🎉</div>
+          <h2>Quote Request Sent!</h2>
+          <p>Thanks! We've received your details and one of our friendly Gold Coast team members will be in touch very shortly with your personalised painting quote.</p>
+          <p style="margin-bottom:24px;font-weight:600;color:var(--charcoal);">Can't wait? Give us a call now:</p>
+          <a href="tel:0406665708" class="thankyou-number">📞 0406 665 708</a>
         </div>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="service-areas.html">Service Areas</a></li>
-          <li><a href="get-a-quote.html">Get a Quote</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Our Services</h4>
-        <ul>
-          <li>Interior Painting</li>
-          <li>Exterior Painting</li>
-          <li>Roof Painting</li>
-          <li>Driveway Painting</li>
-          <li>Residential & Commercial</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact Us</h4>
-        <ul>
-          <li>📧 <a href="mailto:contact@stanleyspainting.com.au">contact@stanleyspainting.com.au</a></li>
-          <li>📞 <a href="tel:0406665708">0406 665 708</a></li>
-        </ul>
+
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
-      <p>Website built by <a href="https://quoteleads.com.au " target="_blank">QuoteLeads</a></p>
+
+    <div class="survey-trust">
+      <div class="survey-trust-item">🔒 100% Private</div>
+      <div class="survey-trust-item">⚡ Fast Response</div>
+      <div class="survey-trust-item">🤝 No Obligation</div>
+      <div class="survey-trust-item">⭐ 5-Star Rated</div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('active');
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services">
+      <p>Professional painting services across the Gold Coast. Exterior, interior, roof and driveway painting by locals who take pride in every job.</p>
+      <a href="tel:0406665708" class="footer-contact-item">📞 0406 665 708</a>
+      <a href="mailto:contact@stanleyspainting.com.au" class="footer-contact-item">✉️ contact@stanleyspainting.com.au</a>
+      <span class="footer-contact-item">📍 Gold Coast, QLD</span>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/services.html">Exterior Painting</a>
+      <a href="/services.html">Interior Painting</a>
+      <a href="/services.html">Roof Painting</a>
+      <a href="/services.html">Driveway Painting</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/service-areas.html">Service Areas</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/get-a-quote.html">Get a Quote</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
+    <p>Website by <a href="https://quoteleads.com.au" target="_blank">QuoteLeads</a></p>
+  </div>
+</footer>
+
+<script>
+  const answers = { projectType: null };
+
+  function selectOption(field, value, el) {
+    answers[field] = value;
+    el.closest('.options-grid').querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    if (field === 'projectType') document.getElementById('nextBtn1').disabled = false;
+  }
+
+  function buildPills(stepId) {
+    const el = document.getElementById('summaryPills' + stepId);
+    if (!el) return;
+    el.innerHTML = '';
+    if (answers.projectType) el.innerHTML += `<span class="pill">🎨 ${answers.projectType}</span>`;
+    const name = document.getElementById('name') ? document.getElementById('name').value.trim() : '';
+    if (name && stepId >= 3) el.innerHTML += `<span class="pill">👤 ${name}</span>`;
+  }
+
+  function goToStep(n) {
+    for (let i = 1; i <= 5; i++) {
+      const el = document.getElementById('step' + i);
+      if (el) el.style.display = 'none';
     }
-
-    const stanleyForm = document.getElementById("stanleyForm");
-    const stanleySteps = document.querySelectorAll(".form-step");
-    const progressFill = document.getElementById("progressFill");
-    let stanleyCurrentStep = 0;
-
-    function updateProgress() {
-      const progress = ((stanleyCurrentStep + 1) / stanleySteps.length) * 100;
-      progressFill.style.width = progress + '%';
+    const target = document.getElementById('step' + n);
+    if (target) {
+      target.style.display = 'block';
+      target.className = 'survey-step';
+      void target.offsetWidth;
     }
+    const pct = (n / 5) * 100;
+    document.getElementById('progressFill').style.width = pct + '%';
+    buildPills(n);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-    function nextStep() {
-      if (stanleyCurrentStep < stanleySteps.length - 1) {
-        stanleySteps[stanleyCurrentStep].classList.remove("active");
-        stanleyCurrentStep++;
-        stanleySteps[stanleyCurrentStep].classList.add("active");
-        updateProgress();
-      }
-    }
+  function checkStep2() {
+    const val = document.getElementById('name').value.trim();
+    document.getElementById('nextBtn2').disabled = !val;
+  }
 
-    function prevStep() {
-      if (stanleyCurrentStep > 0) {
-        stanleySteps[stanleyCurrentStep].classList.remove("active");
-        stanleyCurrentStep--;
-        stanleySteps[stanleyCurrentStep].classList.add("active");
-        updateProgress();
-      }
-    }
+  function checkStep3() {
+    const val = document.getElementById('email').value.trim();
+    document.getElementById('nextBtn3').disabled = !(val && val.includes('@'));
+  }
 
-    // Handle select options
-    document.querySelectorAll('.select-group').forEach(group => {
-      const name = group.dataset.name;
-      const hiddenInput = stanleyForm.querySelector(`input[name="${name}"]`);
-      group.querySelectorAll('.select-option').forEach(option => {
-        option.addEventListener('click', () => {
-          group.querySelectorAll('.select-option').forEach(opt => opt.classList.remove('selected'));
-          option.classList.add('selected');
-          if (hiddenInput) hiddenInput.value = option.dataset.value || option.textContent.trim();
-        });
+  function checkStep4() {
+    const val = document.getElementById('phone').value.trim();
+    document.getElementById('nextBtn4').disabled = !val;
+  }
+
+  function checkStep5() {
+    const val = document.getElementById('address').value.trim();
+    document.getElementById('nextBtn5').disabled = !val;
+  }
+
+  function submitForm() {
+    const btn = document.getElementById('nextBtn5');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    const payload = {
+      project_type: answers.projectType,
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      address: document.getElementById('address').value.trim(),
+      source: 'Website - Get a Quote Page',
+      timestamp: new Date().toISOString()
+    };
+
+    fetch('https://hook.eu2.make.com/qyw1mbj8a6lu42biv0t3cmjm1ey2vs6e', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(() => showThankYou())
+    .catch(() => showThankYou());
+
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead', {
+        content_name: 'Painting Quote Request',
+        content_category: answers.projectType || 'Painting',
       });
-    });
+    }
+  }
 
-    // Submit
-    stanleyForm.addEventListener("submit", async (e)=>{
-      e.preventDefault();
-      const fd = new FormData(stanleyForm);
-      const data = {};
-      fd.forEach((v,k)=>data[k]=v);
+  function showThankYou() {
+    for (let i = 1; i <= 5; i++) {
+      const el = document.getElementById('step' + i);
+      if (el) el.style.display = 'none';
+    }
+    const ty = document.getElementById('thankyou');
+    ty.style.display = 'block';
+    document.getElementById('progressFill').style.width = '100%';
+  }
+</script>
 
-      await fetch("https://hook.eu2.make.com/qyw1mbj8a6lu42biv0t3cmjm1ey2vs6e ",{
-        method:"POST",
-        headers:{ "Content-Type":"application/json" },
-        body:JSON.stringify(data)
-      });
-
-      // Fire Stanley's Painting Meta Pixel Lead Event
-      if (typeof fbq === "function") {
-        fbq('track', 'Lead');
-      }
-
-      stanleyForm.style.display = "none";
-      progressFill.parentElement.style.display = "none";
-      document.getElementById("thankYouMessage").style.display = "block";
-    });
-  </script>
 </body>
 </html>

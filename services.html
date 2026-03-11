@@ -3,505 +3,360 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stanley's Painting Services offers professional interior painting, exterior painting, roof painting, and driveway painting for residential and commercial properties on the Gold Coast.">
-  <meta name="keywords" content="interior painting Gold Coast, exterior painting, roof painting, driveway painting, commercial painting, residential painting">
-  <title>Painting Services Gold Coast | Interior & Exterior Painters</title>
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
-  
+  <title>Painting Services Gold Coast | Stanley's Painting Services</title>
+  <meta name="description" content="Professional exterior, interior, roof and driveway painting across the Gold Coast. View all services by Stanley's Painting Services.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '977805120850078');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=977805120850078&ev=PageView&noscript=1"/></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --orange: #F69E3D;
+      --orange-dark: #e08828;
+      --orange-light: #fdb96a;
+      --charcoal: #1c1c1e;
+      --dark: #111;
+      --light-bg: #fafaf8;
+      --text-muted: #666;
+      --border: #e8e4de;
     }
-    
-    body {
-      font-family: 'Avenir', Arial, sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-      color: #333;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 700;
-    }
-    
-    /* Header */
-    header {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-    }
-    
-    .logo img {
-      height: 60px;
-    }
-    
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    
-    nav a:hover {
-      color: #F69E3D;
-    }
-    
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 28px;
-      cursor: pointer;
-      color: #333;
-    }
-    
-    /* Page Header */
-    .page-header {
-      background: linear-gradient(135deg, #F69E3D 0%, #f5a623 100%);
-      color: white;
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; font-weight: 300; background: var(--light-bg); color: var(--charcoal); overflow-x: hidden; }
+
+    /* ── HEADER ── */
+    header { background: var(--charcoal); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+    header img { height: 48px; }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a { color: #aaa; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: white; }
+    .header-cta { background: var(--orange); color: white; padding: 10px 22px; border-radius: 6px; font-weight: 600; font-size: 14px; text-decoration: none; transition: background 0.2s; white-space: nowrap; }
+    .header-cta:hover { background: var(--orange-dark); }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: var(--charcoal);
+      padding: 70px 24px 80px;
       text-align: center;
-      padding: 80px 20px 60px;
+      position: relative;
+      overflow: hidden;
     }
-    
-    .page-header h1 {
-      font-size: 48px;
-      margin-bottom: 15px;
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 120%, rgba(246,158,61,0.2) 0%, transparent 70%);
     }
-    
-    .page-header p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: 0 auto;
+    .page-hero .section-label { color: var(--orange-light); margin-bottom: 16px; position: relative; }
+    .page-hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 0.95;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      position: relative;
+      margin-bottom: 20px;
     }
-    
-    /* Services Section */
-    .services-section {
-      max-width: 1200px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
-    
+    .page-hero h1 span { color: var(--orange); }
+    .page-hero p { color: #aaa; font-size: 17px; max-width: 540px; margin: 0 auto; line-height: 1.6; position: relative; }
+
+    /* ── SHARED ── */
+    .section-label { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(34px, 5vw, 52px); text-transform: uppercase; line-height: 1; letter-spacing: -0.5px; color: var(--charcoal); margin-bottom: 16px; }
+    .section-sub { color: var(--text-muted); font-size: 17px; max-width: 520px; line-height: 1.6; margin-bottom: 40px; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar { background: var(--orange); padding: 16px 24px; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; color: white; font-weight: 600; font-size: 14px; }
+    .trust-item .icon { font-size: 18px; }
+
+    /* ── SERVICE BLOCKS ── */
+    .services-list { padding: 90px 24px; max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 80px; }
+
     .service-block {
-      margin-bottom: 80px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
+      gap: 64px;
       align-items: center;
     }
-    
-    .service-block:nth-child(even) {
-      direction: rtl;
+    .service-block.reverse { direction: rtl; }
+    .service-block.reverse > * { direction: ltr; }
+
+    .service-block-img {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 380px;
+      background: var(--charcoal);
     }
-    
-    .service-block:nth-child(even) > * {
-      direction: ltr;
-    }
-    
-    .service-image img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-    
-    .service-content h2 {
-      color: #F69E3D;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    
-    .service-content p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 15px;
-    }
-    
-    .service-content ul {
-      margin: 20px 0;
-      padding-left: 20px;
-    }
-    
-    .service-content ul li {
-      margin-bottom: 10px;
-      font-size: 17px;
-    }
-    
-    /* Property Types Section */
-    .property-types {
-      background: #f5f5f5;
-      padding: 60px 20px;
-      margin: 60px 0;
-    }
-    
-    .property-types-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .property-types h2 {
-      font-size: 40px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    
-    .property-types p {
-      font-size: 18px;
-      margin-bottom: 40px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .property-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      margin-top: 40px;
-    }
-    
-    .property-card {
-      background: white;
-      padding: 40px 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    
-    .property-card:hover {
-      transform: translateY(-8px);
-    }
-    
-    .property-card h3 {
-      color: #F69E3D;
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-    
-    .property-card p {
-      font-size: 17px;
-      line-height: 1.8;
-    }
-    
-    /* CTA Section */
-    .cta-section {
-      background: #F69E3D;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    
-    .cta-section h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    
-    .cta-section p {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-    
-    .cta-button {
+    .service-block-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .service-block-content {}
+
+    .service-block-content .badge {
       display: inline-block;
-      background: white;
-      color: #F69E3D;
-      padding: 15px 40px;
-      text-decoration: none;
+      background: rgba(246,158,61,0.1);
+      border: 1px solid rgba(246,158,61,0.3);
+      color: var(--orange-dark);
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-size: 12px;
       font-weight: 700;
-      border-radius: 30px;
-      font-size: 18px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
     }
-    
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-    
-    /* Footer */
-    footer {
-      background: #1a1a1a;
-      color: white;
-      padding: 40px 20px 20px;
-    }
-    
-    .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 30px;
-    }
-    
-    .footer-logo img {
-      height: 80px;
+
+    .service-block-content h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(36px, 4vw, 52px);
+      text-transform: uppercase;
+      line-height: 1;
+      color: var(--charcoal);
       margin-bottom: 20px;
     }
-    
-    .footer-section h4 {
-      color: #F69E3D;
-      margin-bottom: 15px;
-      font-size: 18px;
+
+    .service-block-content p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
     }
-    
-    .footer-section ul {
-      list-style: none;
+
+    .feature-list { list-style: none; margin: 24px 0 32px; display: flex; flex-direction: column; gap: 10px; }
+    .feature-list li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--charcoal); font-weight: 500; }
+    .feature-list li::before { content: '✓'; width: 22px; height: 22px; background: var(--orange); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+
+    .service-cta { display: inline-block; background: var(--orange); color: white; padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 700; text-decoration: none; transition: background 0.2s; }
+    .service-cta:hover { background: var(--orange-dark); }
+
+    /* ── PROPERTY TYPES ── */
+    .property-types { background: var(--charcoal); padding: 90px 24px; }
+    .property-inner { max-width: 1100px; margin: 0 auto; }
+    .property-inner .section-title { color: white; }
+    .property-inner .section-sub { color: #888; }
+    .property-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+    .property-card {
+      background: rgba(246,158,61,0.08);
+      border: 1px solid rgba(246,158,61,0.2);
+      border-radius: 16px;
+      padding: 40px 36px;
     }
-    
-    .footer-section ul li {
-      margin-bottom: 10px;
+    .property-icon { font-size: 44px; margin-bottom: 20px; }
+    .property-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 30px; font-weight: 700; text-transform: uppercase; color: white; margin-bottom: 12px; }
+    .property-card p { color: #888; font-size: 15px; line-height: 1.7; }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta { background: var(--orange); padding: 90px 24px; text-align: center; }
+    .bottom-cta h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(40px, 6vw, 70px); font-weight: 900; text-transform: uppercase; color: white; line-height: 1; margin-bottom: 16px; }
+    .bottom-cta p { color: rgba(255,255,255,0.8); font-size: 17px; margin-bottom: 32px; }
+    .btn-dark { display: inline-block; background: var(--charcoal); color: white; padding: 18px 44px; border-radius: 8px; font-size: 17px; font-weight: 700; text-decoration: none; transition: background 0.2s; }
+    .btn-dark:hover { background: #111; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--dark); padding: 56px 24px 32px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid #222; }
+    .footer-brand img { height: 48px; margin-bottom: 16px; display: block; }
+    .footer-brand p { color: #555; font-size: 14px; line-height: 1.7; max-width: 280px; margin-bottom: 20px; }
+    .footer-contact-item { display: flex; align-items: center; gap: 10px; color: #888; font-size: 14px; margin-bottom: 8px; text-decoration: none; }
+    .footer-contact-item:hover { color: var(--orange); }
+    .footer-col h4 { color: white; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .footer-col a { display: block; color: #555; text-decoration: none; font-size: 14px; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); }
+    .footer-bottom { max-width: 1100px; margin: 24px auto 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { color: #444; font-size: 13px; }
+    .footer-bottom a { color: var(--orange); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .service-block, .service-block.reverse { grid-template-columns: 1fr; direction: ltr; gap: 32px; }
+      .property-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
     }
-    
-    .footer-section a {
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-section a:hover {
-      color: #F69E3D;
-    }
-    
-    .reviews {
-      margin-top: 10px;
-      color: #FFD700;
-      font-size: 18px;
-    }
-    
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid #333;
-      padding-top: 20px;
-      margin-top: 30px;
-      font-size: 14px;
-    }
-    
-    .footer-bottom p {
-      margin-bottom: 5px;
-    }
-    
-    .footer-bottom a {
-      color: #F69E3D;
-      text-decoration: none;
-    }
-    
-    .footer-bottom a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Mobile Responsive */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-      }
-      
-      nav ul.active {
-        display: flex;
-      }
-      
-      .mobile-menu-btn {
-        display: block;
-      }
-      
-      .page-header h1 {
-        font-size: 32px;
-      }
-      
-      .service-block {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      
-      .service-block:nth-child(even) {
-        direction: ltr;
-      }
-      
-      .service-content h2 {
-        font-size: 28px;
-      }
-      
-      .property-types h2 {
-        font-size: 32px;
-      }
-      
-      .footer-container {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 600px) {
+      .trust-bar { gap: 16px; }
+      .service-block-img { height: 240px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO.png" alt="Stanley's Painting Services Logo">
-        </a>
-      </div>
-      <nav>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-        <ul id="navMenu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="service-areas.html">Service Areas</a></li>
-          <li><a href="get-a-quote.html">Get a Quote</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+
+<!-- HEADER -->
+<header>
+  <a href="/"><img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services"></a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/services.html" class="active">Services</a>
+    <a href="/service-areas.html">Service Areas</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+  <a href="/get-a-quote.html" class="header-cta">Get Free Quote →</a>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="section-label">What We Offer</div>
+  <h1>Professional Painting<br><span>Services</span></h1>
+  <p>Comprehensive painting solutions for residential and commercial properties across the Gold Coast.</p>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="icon">📍</span> Gold Coast Locals</div>
+  <div class="trust-item"><span class="icon">🔧</span> In-House Team Only</div>
+  <div class="trust-item"><span class="icon">💰</span> Affordable Pricing</div>
+  <div class="trust-item"><span class="icon">🤝</span> Obligation-Free Quotes</div>
+  <div class="trust-item"><span class="icon">⭐</span> 5-Star Rated</div>
+</div>
+
+<!-- SERVICES LIST -->
+<div class="services-list">
+
+  <!-- Exterior Painting -->
+  <div class="service-block">
+    <div class="service-block-img">
+      <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/Exterior%201.png" alt="Exterior Painting Gold Coast">
     </div>
-  </header>
-
-  <!-- Page Header -->
-  <section class="page-header">
-    <h1>Professional Painting Services</h1>
-    <p>Comprehensive painting solutions for residential and commercial properties across the Gold Coast</p>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services-section">
-    <div class="service-block">
-      <div class="service-image">
-        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/Exterior%201.png" alt="Interior and Exterior Painting Gold Coast">
-      </div>
-      <div class="service-content">
-        <h2>Interior & Exterior Painting</h2>
-        <p>Transform your property with our expert interior and exterior painting services. Whether you're refreshing a single room or renovating your entire property, our skilled team delivers flawless results that stand the test of time.</p>
-        <p><strong>Interior Painting:</strong> From living rooms to bedrooms, kitchens to bathrooms, we provide meticulous interior painting that enhances your space's beauty and atmosphere. We use premium paints and precise techniques to ensure a perfect finish.</p>
-        <p><strong>Exterior Painting:</strong> Protect and beautify your property's exterior with our professional painting services. We prepare surfaces properly, use weather-resistant paints, and deliver stunning curb appeal that lasts for years.</p>
-      </div>
+    <div class="service-block-content">
+      <span class="badge">Residential &amp; Commercial</span>
+      <h2>Exterior &amp; Interior Painting</h2>
+      <p>Whether it's the outside of your home needing a fresh new look or interior walls that have seen better days, our professional team delivers a flawless finish every time.</p>
+      <p>We prep every surface properly — filling cracks, sanding, priming — so the paint bonds perfectly and lasts for years.</p>
+      <ul class="feature-list">
+        <li>Full surface preparation included</li>
+        <li>Premium paints with UV &amp; weather resistance</li>
+        <li>Interior &amp; exterior — all surfaces</li>
+        <li>Residential homes &amp; commercial properties</li>
+        <li>Colour consultation available</li>
+      </ul>
+      <a href="/get-a-quote.html" class="service-cta">Get a Free Quote →</a>
     </div>
+  </div>
 
-    <div class="service-block">
-      <div class="service-image">
-        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/GOLDCOAST-ROOF-PAINTING.png" alt="Roof Painting Gold Coast">
-      </div>
-      <div class="service-content">
-        <h2>Roof Painting</h2>
-        <p>Extend the life of your roof and enhance your property's appearance with our professional roof painting services. Our specialized roof painting process protects against the harsh Gold Coast sun and coastal conditions.</p>
-        <p>We thoroughly clean and prepare your roof, repair any damage, apply quality sealants, and finish with premium roof paint designed to withstand extreme weather conditions. The result is a roof that looks great and performs better for years to come.</p>
-      </div>
+  <!-- Roof Painting -->
+  <div class="service-block reverse">
+    <div class="service-block-img">
+      <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/GOLDCOAST-ROOF-PAINTING.png" alt="Roof Painting Gold Coast">
     </div>
-
-    <div class="service-block">
-      <div class="service-image">
-        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/DRIVEWAY-PAINTING%201.png" alt="Driveway Painting Gold Coast">
-      </div>
-      <div class="service-content">
-        <h2>Driveway Painting</h2>
-        <p>Make a lasting first impression with professional driveway painting. We transform worn, stained driveways into beautiful, durable surfaces that enhance your property's street appeal.</p>
-        <p>Our driveway painting service includes thorough surface preparation, crack repairs, pressure cleaning, and the application of high-quality, slip-resistant coatings designed for concrete and asphalt surfaces. Perfect for both residential and commercial properties.</p>
-      </div>
+    <div class="service-block-content">
+      <span class="badge">Wash &amp; Paint Process</span>
+      <h2>Roof Painting</h2>
+      <p>A faded or stained roof is more than an eyesore — it can lead to expensive damage if left untreated. Our comprehensive roof painting process cleans, repairs and restores your roof to like-new condition.</p>
+      <p>We use only high-grade roof paints designed to withstand Queensland's harsh climate, UV exposure and salt air.</p>
+      <ul class="feature-list">
+        <li>High-pressure wash to remove all contaminants</li>
+        <li>Crack repairs and surface preparation</li>
+        <li>Quality primer and sealant application</li>
+        <li>Premium UV-resistant roof paint</li>
+        <li>Final inspection walkover with you</li>
+      </ul>
+      <a href="/get-a-quote.html" class="service-cta">Get a Free Quote →</a>
     </div>
-  </section>
+  </div>
 
-  <!-- Property Types Section -->
-  <section class="property-types">
-    <div class="property-types-content">
-      <h2>Residential & Commercial</h2>
-      <p>Stanley's Painting Services proudly serves both residential and commercial clients across the Gold Coast. No job is too big or too small.</p>
-      
-      <div class="property-grid">
-        <div class="property-card">
-          <h3>Residential Painting</h3>
-          <p>From single-family homes to multi-unit developments, we provide homeowners with quality painting services that enhance property value and create beautiful living spaces. Our residential services include complete interior and exterior painting, feature walls, roof painting, and more.</p>
-        </div>
-        
-        <div class="property-card">
-          <h3>Commercial Painting</h3>
-          <p>We understand that commercial properties require minimal disruption and maximum efficiency. Our commercial painting services are tailored to business needs, including offices, retail spaces, warehouses, and industrial facilities. We work around your schedule to ensure your business keeps running smoothly.</p>
-        </div>
-      </div>
+  <!-- Driveway Painting -->
+  <div class="service-block">
+    <div class="service-block-img">
+      <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/DRIVEWAY-PAINTING%201.png" alt="Driveway Painting Gold Coast">
     </div>
-  </section>
+    <div class="service-block-content">
+      <span class="badge">Slip-Resistant Coatings</span>
+      <h2>Driveway Painting</h2>
+      <p>Your driveway is one of the first things people notice. An old, stained or cracked driveway can let down an otherwise beautiful home. Our driveway restoration service transforms it completely.</p>
+      <p>We use specialist coatings engineered to handle heavy traffic, oil, and the harshest weather conditions.</p>
+      <ul class="feature-list">
+        <li>High-pressure cleaning to prep the surface</li>
+        <li>Crack and chip repairs</li>
+        <li>Slip-resistant protective coatings</li>
+        <li>Concrete, paving &amp; exposed aggregate</li>
+        <li>Long-lasting, traffic-grade finish</li>
+      </ul>
+      <a href="/get-a-quote.html" class="service-cta">Get a Free Quote →</a>
+    </div>
+  </div>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <h2>Get a Free Painting Quote Today!</h2>
-    <p>Ready to transform your property? Contact us for a no-obligation quote.</p>
-    <a href="get-a-quote.html" class="cta-button">Request Your Free Quote</a>
-  </section>
+</div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services">
-        <p>Gold Coast, QLD</p>
-        <div class="reviews">
-          ⭐⭐⭐⭐⭐ 5 Star Google Reviews<br>
-          ⭐⭐⭐⭐⭐ 5 Star Local Search Reviews
-        </div>
+<!-- PROPERTY TYPES -->
+<section class="property-types">
+  <div class="property-inner">
+    <div class="section-label">Who We Work With</div>
+    <h2 class="section-title">Residential &amp;<br>Commercial</h2>
+    <p class="section-sub">We work with homeowners and business owners across the Gold Coast — any size, any project.</p>
+    <div class="property-grid">
+      <div class="property-card">
+        <div class="property-icon">🏠</div>
+        <h3>Residential Painting</h3>
+        <p>From single-family homes to multi-unit developments, we handle residential painting projects of all sizes. We treat your home with the respect it deserves — every time.</p>
       </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="service-areas.html">Service Areas</a></li>
-          <li><a href="get-a-quote.html">Get a Quote</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Our Services</h4>
-        <ul>
-          <li>Interior Painting</li>
-          <li>Exterior Painting</li>
-          <li>Roof Painting</li>
-          <li>Driveway Painting</li>
-          <li>Residential & Commercial</li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contact Us</h4>
-        <ul>
-          <li>📧 <a href="mailto:contact@stanleyspainting.com.au">contact@stanleyspainting.com.au</a></li>
-          <li>📞 <a href="tel:0406665708">0406 665 708</a></li>
-        </ul>
+      <div class="property-card">
+        <div class="property-icon">🏢</div>
+        <h3>Commercial Painting</h3>
+        <p>Offices, retail spaces, warehouses and industrial facilities. We work around your schedule to minimise disruption and deliver a professional result that reflects your brand.</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
-      <p>Website built by <a href="https://quoteleads.com.au" target="_blank">QuoteLeads</a></p>
-    </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('active');
-    }
-  </script>
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>Ready to Get<br>Started?</h2>
+  <p>Get a free, obligation-free painting quote from our Gold Coast team today.</p>
+  <a href="/get-a-quote.html" class="btn-dark">Get a Free Quote →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="https://raw.githubusercontent.com/buckleydigital/stanleyspainting/main/LOGO-WHITE.png" alt="Stanley's Painting Services">
+      <p>Professional painting services across the Gold Coast. Exterior, interior, roof and driveway painting by locals who take pride in every job.</p>
+      <a href="tel:0406665708" class="footer-contact-item">📞 0406 665 708</a>
+      <a href="mailto:contact@stanleyspainting.com.au" class="footer-contact-item">✉️ contact@stanleyspainting.com.au</a>
+      <span class="footer-contact-item">📍 Gold Coast, QLD</span>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/services.html">Exterior Painting</a>
+      <a href="/services.html">Interior Painting</a>
+      <a href="/services.html">Roof Painting</a>
+      <a href="/services.html">Driveway Painting</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/service-areas.html">Service Areas</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/get-a-quote.html">Get a Quote</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Stanley Painting Services PTY LTD. All rights reserved.</p>
+    <p>Website by <a href="https://quoteleads.com.au" target="_blank">QuoteLeads</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
