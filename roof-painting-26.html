@@ -273,6 +273,7 @@
             <div class="fg"><label>Your Full Name</label><input type="text" id="fName" placeholder="e.g. John Smith"></div>
             <div class="fg"><label>Mobile Number</label><input type="tel" id="fPhone" placeholder="e.g. 0412 345 678"><div id="phoneError" style="display:none;color:#c0392b;font-size:13px;margin-top:6px;">Please enter a valid Australian phone number.</div></div>
             <div class="fg"><label>Email Address</label><input type="email" id="fEmail" placeholder="e.g. john@email.com"></div>
+            <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label for="fWebsite">Website</label><input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off"></div>
             <div class="fg"><label>Your Suburb</label><input type="text" id="fSuburb" placeholder="e.g. Robina, Burleigh, Broadbeach..."></div>
           </div>
           <div class="snav">
@@ -450,7 +451,7 @@
 
     // Hard gate: Australian numbers only; silently drop SEO / marketing pitches.
     if (!payload.phone) { btn.textContent = '\uD83C\uDF89 Get My Free Quote'; checkForm(); return; }
-    if (SpamGuard.containsBlockedTerms(payload.name, payload.email, payload.suburb)) { finish(); return; }
+    if (document.getElementById('fWebsite').value || SpamGuard.containsBlockedTerms(payload.name, payload.email, payload.suburb)) { finish(); return; }
 
     fetch('https://hook.eu2.make.com/149ptmxvjd7vqrpwy1peek8ab7papa65', {
       method : 'POST',

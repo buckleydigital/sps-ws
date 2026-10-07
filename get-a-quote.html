@@ -402,6 +402,7 @@
           <div class="form-group">
             <label>Mobile Number</label>
             <input type="tel" id="phone" placeholder="e.g. 0412 345 678" oninput="checkStep4()">
+            <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
             <div id="phoneError" style="display:none;color:#c0392b;font-size:13px;margin-top:6px;">Please enter a valid Australian phone number (e.g. 0412 345 678 or +61 412 345 678).</div>
           </div>
           <div class="survey-nav">
@@ -554,7 +555,7 @@
 
     // Hard gate: Australian numbers only; silently drop SEO / marketing pitches.
     if (!payload.phone) { goToStep(4); checkStep4(); btn.textContent = '🎉 Send My Quote Request'; btn.disabled = false; return; }
-    if (SpamGuard.containsBlockedTerms(payload.name, payload.email, payload.address)) { showThankYou(); return; }
+    if (document.getElementById('website').value || SpamGuard.containsBlockedTerms(payload.name, payload.email, payload.address)) { showThankYou(); return; }
 
     fetch('https://hook.eu2.make.com/qyw1mbj8a6lu42biv0t3cmjm1ey2vs6e', {
       method: 'POST',
