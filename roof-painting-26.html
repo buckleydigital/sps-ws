@@ -271,7 +271,7 @@
           <div class="survey-hint">Your details are 100% private and we'll never spam you.</div>
           <div class="form-grid">
             <div class="fg"><label>Your Full Name</label><input type="text" id="fName" placeholder="e.g. John Smith"></div>
-            <div class="fg"><label>Mobile Number</label><input type="tel" id="fPhone" placeholder="e.g. 0412 345 678"></div>
+            <div class="fg"><label>Mobile Number</label><input type="tel" id="fPhone" placeholder="e.g. 0412 345 678"><div id="phoneError" style="display:none;color:#c0392b;font-size:13px;margin-top:6px;">Please enter a valid Australian phone number.</div></div>
             <div class="fg"><label>Email Address</label><input type="email" id="fEmail" placeholder="e.g. john@email.com"></div>
             <div class="fg"><label>Your Suburb</label><input type="text" id="fSuburb" placeholder="e.g. Robina, Burleigh, Broadbeach..."></div>
           </div>
@@ -352,6 +352,7 @@
   <p>Website by <a href="https://quoteleads.com.au" target="_blank">QuoteLeads</a></p>
 </footer>
 
+<script src="spam-guard.js"></script>
 <script>
 (function () {
   var roofType = null;
@@ -397,8 +398,11 @@
 
   // Form validation
   function checkForm() {
+    var phone = document.getElementById('fPhone').value.trim();
+    var phoneOk = SpamGuard.isAuPhone(phone);
+    document.getElementById('phoneError').style.display = (phone.replace(/\D/g, '').length >= 9 && !phoneOk) ? 'block' : 'none';
     var ok = document.getElementById('fName').value.trim() &&
-             document.getElementById('fPhone').value.trim() &&
+             phoneOk &&
              document.getElementById('fEmail').value.trim() &&
              document.getElementById('fSuburb').value.trim();
     document.getElementById('n3').disabled = !ok;
@@ -437,12 +441,16 @@
       roofType : roofType,
       service  : service,
       name     : document.getElementById('fName').value.trim(),
-      phone    : document.getElementById('fPhone').value.trim(),
+      phone    : SpamGuard.normaliseAuPhone(document.getElementById('fPhone').value),
       email    : document.getElementById('fEmail').value.trim(),
       suburb   : document.getElementById('fSuburb').value.trim(),
       source   : 'Facebook Ad - Roof Painting LP',
       timestamp: new Date().toISOString()
     };
+
+    // Hard gate: Australian numbers only; silently drop SEO / marketing pitches.
+    if (!payload.phone) { btn.textContent = '\uD83C\uDF89 Get My Free Quote'; checkForm(); return; }
+    if (SpamGuard.containsBlockedTerms(payload.name, payload.email, payload.suburb)) { finish(); return; }
 
     fetch('https://hook.eu2.make.com/149ptmxvjd7vqrpwy1peek8ab7papa65', {
       method : 'POST',

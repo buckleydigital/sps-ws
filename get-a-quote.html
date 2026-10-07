@@ -402,6 +402,7 @@
           <div class="form-group">
             <label>Mobile Number</label>
             <input type="tel" id="phone" placeholder="e.g. 0412 345 678" oninput="checkStep4()">
+            <div id="phoneError" style="display:none;color:#c0392b;font-size:13px;margin-top:6px;">Please enter a valid Australian phone number (e.g. 0412 345 678 or +61 412 345 678).</div>
           </div>
           <div class="survey-nav">
             <button class="btn-back" onclick="goToStep(3)">← Back</button>
@@ -478,6 +479,7 @@
   </div>
 </footer>
 
+<script src="spam-guard.js"></script>
 <script>
   const answers = { projectType: null };
 
@@ -525,7 +527,9 @@
 
   function checkStep4() {
     const val = document.getElementById('phone').value.trim();
-    document.getElementById('nextBtn4').disabled = !val;
+    const ok = SpamGuard.isAuPhone(val);
+    document.getElementById('nextBtn4').disabled = !ok;
+    document.getElementById('phoneError').style.display = (val.replace(/\D/g, '').length >= 9 && !ok) ? 'block' : 'none';
   }
 
   function checkStep5() {
@@ -542,11 +546,15 @@
       project_type: answers.projectType,
       name: document.getElementById('name').value.trim(),
       email: document.getElementById('email').value.trim(),
-      phone: document.getElementById('phone').value.trim(),
+      phone: SpamGuard.normaliseAuPhone(document.getElementById('phone').value),
       address: document.getElementById('address').value.trim(),
       source: 'Website - Get a Quote Page',
       timestamp: new Date().toISOString()
     };
+
+    // Hard gate: Australian numbers only; silently drop SEO / marketing pitches.
+    if (!payload.phone) { goToStep(4); checkStep4(); btn.textContent = '🎉 Send My Quote Request'; btn.disabled = false; return; }
+    if (SpamGuard.containsBlockedTerms(payload.name, payload.email, payload.address)) { showThankYou(); return; }
 
     fetch('https://hook.eu2.make.com/qyw1mbj8a6lu42biv0t3cmjm1ey2vs6e', {
       method: 'POST',

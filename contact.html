@@ -342,8 +342,9 @@
               <input type="text" id="fname" name="name" placeholder="e.g. John Smith" required>
             </div>
             <div class="form-group">
-              <label for="fphone">Phone Number</label>
-              <input type="tel" id="fphone" name="phone" placeholder="e.g. 0412 345 678">
+              <label for="fphone">Phone Number <span style="color:var(--orange)">*</span></label>
+              <input type="tel" id="fphone" name="phone" placeholder="e.g. 0412 345 678" required>
+              <div id="phoneError" style="display:none;color:#c0392b;font-size:13px;margin-top:6px;">Please enter a valid Australian phone number (e.g. 0412 345 678 or +61 412 345 678).</div>
             </div>
           </div>
           <div class="form-group">
@@ -408,15 +409,33 @@
   </div>
 </footer>
 
+<script src="spam-guard.js"></script>
 <script>
   function handleSubmit(e) {
     e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const data = new FormData(form);
+
+    const phone = SpamGuard.normaliseAuPhone(data.get('phone'));
+    const phoneError = document.getElementById('phoneError');
+    if (!phone) {
+      phoneError.style.display = 'block';
+      document.getElementById('fphone').focus();
+      return;
+    }
+    phoneError.style.display = 'none';
+    data.set('phone', phone);
+
     const btn = document.getElementById('submitBtn');
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    const form = document.getElementById('contactForm');
-    const data = new FormData(form);
+    // Silently drop SEO / marketing pitches: show success but never send.
+    if (SpamGuard.containsBlockedTerms(data.get('name'), data.get('email'), data.get('message'))) {
+      document.getElementById('formContent').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      return;
+    }
 
     fetch(form.action, {
       method: 'POST',
